@@ -17,9 +17,9 @@ if (!((side _unit) in [civilian,independent])) exitWith {}; //Not a civ
 if (isNull _unit) exitWith {}; //Not valid
 
 if (life_HC_isActive) then {
-    [getPlayerUID _unit,_unit,player,false] remoteExecCall ["HC_fnc_wantedBounty",HC_Life];
+    [_unit getVariable ["userid",name _unit],_unit,player,false] remoteExecCall ["HC_fnc_wantedBounty",HC_Life];
 } else {
-    [getPlayerUID _unit,_unit,player,false] remoteExecCall ["life_fnc_wantedBounty",RSERV];
+    [_unit getVariable ["userid",name _unit],_unit,player,false] remoteExecCall ["life_fnc_wantedBounty",RSERV];
 };
 
 if (isNull _unit) exitWith {}; //Not valid

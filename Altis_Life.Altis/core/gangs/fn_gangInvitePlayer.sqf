@@ -28,7 +28,8 @@ _action = [
 if (_action) then {
     [profileName,group player] remoteExec ["life_fnc_gangInvite",_unit];
     _members = group player getVariable "gang_members";
-    _members pushBack getPlayerUID _unit;
+	_mb = _unit getVariable ["userid",name _unit];
+    _members pushBack _mb;
     group player setVariable ["gang_members",_members,true];
     hint format [localize "STR_GNOTF_InviteSent",_unit getVariable ["realname",name _unit]];
 } else {

@@ -23,7 +23,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    _unitID = getPlayerUID _unit;
+    _unitID = _unit getVariable ["userid",name _unit];
     if (_unitID isEqualTo "") exitWith {hint localize "STR_GNOTF_badUID";}; //Unlikely?
     group player setVariable ["gang_owner",_unitID,true];
     group player selectLeader _unit;

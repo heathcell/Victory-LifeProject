@@ -84,9 +84,9 @@ if (!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _k
     if (vehicle _killer isKindOf "LandVehicle") then {
 
         if (life_HC_isActive) then {
-            [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
+            [_killer getVariable ["userid",name _killer],_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
         } else {
-            [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+            [_killer getVariable ["userid",name _killer],_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
 
         //Get rid of this if you don't want automatic vehicle license removal.
@@ -96,9 +96,9 @@ if (!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _k
     } else {
 
         if (life_HC_isActive) then {
-            [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
+            [_killer getVariable ["userid",name _killer],_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
         } else {
-            [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+            [_killer getVariable ["userid",name _killer],_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
 
         if (!local _killer) then {
