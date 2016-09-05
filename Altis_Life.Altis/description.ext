@@ -1,9 +1,9 @@
 disableChannels[]={{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
 
-#include "config\Config_Spyglass.hpp"
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "config\Config_Master.hpp"
+#include "infiSTAR_AdminMenu.hpp"
 
 class CfgServer {
     DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
@@ -90,15 +90,6 @@ class CfgDebriefing {
         title = "$STR_Blacklisted_Title";
         subtitle = "$STR_Blacklisted_SubTitle";
         description = "$STR_Blacklisted_Descript";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0,0.3,0.6,1};
-    };
-
-    class SpyGlass {
-        title = $STR_SpyDetect_Title;
-        subTitle = $STR_SpyDetect_SubTitle;
-        description = $STR_SpyDetect_Descript;
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
