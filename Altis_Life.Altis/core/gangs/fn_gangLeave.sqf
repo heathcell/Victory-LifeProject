@@ -7,9 +7,9 @@
     32 hours later...
 */
 private ["_unitID ","_members"];
-if (getPlayerUID player isEqualTo (group player getVariable "gang_owner")) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
+if (USERID isEqualTo (group player getVariable "gang_owner")) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
 
-_unitID = getPlayerUID player;
+_unitID = USERID;
 _members = group player getVariable "gang_members";
 if (isNil "_members") exitWith {};
 if (!(_members isEqualType [])) exitWith {};

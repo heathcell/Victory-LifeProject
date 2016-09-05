@@ -34,7 +34,7 @@ if (_action) then {
 
 } else {
     _grpMembers = group player getVariable "gang_members";
-    _grpMembers = _grpMembers - [getPlayerUID player];
+    _grpMembers = _grpMembers - [USERID];
     group player setVariable ["gang_members",_grpMembers,true];
 
     if (life_HC_isActive) then {

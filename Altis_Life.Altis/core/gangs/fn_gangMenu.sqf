@@ -19,7 +19,7 @@ _gangName = group player getVariable "gang_name";
 _gangBank = GANG_FUNDS;
 _gangMax = group player getVariable "gang_maxMembers";
 
-if (_ownerID != getPlayerUID player) then {
+if (_ownerID != USERID) then {
     (CONTROL(2620,2622)) ctrlEnable false; //Upgrade
     (CONTROL(2620,2624)) ctrlEnable false; // Kick
     (CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
