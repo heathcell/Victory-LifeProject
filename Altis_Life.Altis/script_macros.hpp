@@ -4,7 +4,7 @@
 #define CASH life_cash
 #define BANK life_atmbank
 #define GANG_FUNDS group player getVariable ["gang_bank",0];
-#define USERID player getVariable ["userid",name player];
+#define USERID player getVariable ["userid",name player]
 
 //RemoteExec Macros
 #define RSERV 2 //Only server
@@ -46,14 +46,6 @@
 //UI Macros
 #define LIFEdisplay (uiNamespace getVariable ["playerHUD",displayNull])
 #define LIFEctrl(ctrl) ((uiNamespace getVariable ["playerHUD",displayNull]) displayCtrl ctrl)
-
-//SpyGlass Macros
-#define SPYGLASS_END \
-    vehicle player setVelocity[1e10,1e14,1e18]; \
-    sleep 3; \
-    preprocessFile "SpyGlass\endoftheline.sqf"; \
-    sleep 2.5; \
-    failMission "SpyGlass";
 
 //Map Macros
 #define ALTIS_TANOA(var1,var2) if (worldName == "Altis") then {var1} else {var2}
