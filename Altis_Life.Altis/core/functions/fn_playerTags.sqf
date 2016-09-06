@@ -162,17 +162,23 @@ private _index = -1;
 					};
 					if(_x getVariable ["DirectVON",false]) then {
 						if(side _x in [west,independent]) then {
+							_text = format ["<t color='%1'>         <img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == east) then {
+							_text = format ["<t color='%1'>          <img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == civilian) then {
+							_text = format ["<t color='%1'>     <img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 					} else {
 						if(side _x in [west,independent]) then {
+							_text = format ["<t color='%1'>    <img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == east) then {
+							_text = format ["<t color='%1'>     <img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == civilian) then {
+							_text = format ["<t color='%1'><img image='icons\vip\crown.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 					};
 				};
