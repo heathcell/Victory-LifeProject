@@ -80,9 +80,6 @@ if (LIFE_SETTINGS(getNumber,"save_position_restart") isEqualTo 1) then {
     };
 };
 
-/* Map-based server side initialization. */
-master_group attachTo[bank_obj,[0,0,0]];
-
 {
     _hs = createVehicle ["Land_Hospital_main_F", [0,0,0], [], 0, "NONE"];
     _hs setDir (markerDir _x);
@@ -207,6 +204,19 @@ life_attachment_point setVectorDirAndUp [[0,1,0], [0,0,1]];
 
 // Sharing the point of attachment with all players.
 publicVariable "life_attachment_point";
+
+west setFriend [independent, 1];
+west setFriend [east, 1];
+west setFriend [civilian, 1];
+independent setFriend [west, 1];
+independent setFriend [east, 1];
+independent setFriend [civilian, 1];
+east setFriend [west, 1];
+east setFriend [independent, 1];
+east setFriend [civilian, 1];
+independent setFriend [east, 1];
+independent setFriend [west, 1];
+independent setFriend [civilian, 1];
 
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Server Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
