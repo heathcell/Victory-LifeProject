@@ -21,6 +21,16 @@
 class CfgSpawnPoints {
 
     class Altis {
+		class NATO {
+			class Main_Base {
+                displayName = "NATO BASE";
+                spawnMarker = "nato_base";
+                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                licenses[] = { { "", true } };
+                level[] = { "", "", -1 };
+            };
+		};
+		
         class Civilian {
             class Kavala {
                 displayName = "Kavala";

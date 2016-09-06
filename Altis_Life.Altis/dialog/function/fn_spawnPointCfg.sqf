@@ -15,6 +15,7 @@ _side = param [0,civilian,[civilian]];
 switch (_side) do {
     case independent: {_side = "Cop"};
     case east: {_side = "Medic"};
+	case west: {_side = "NATO"};
     default {_side = "Civilian"};
 };
 
