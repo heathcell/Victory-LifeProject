@@ -265,7 +265,7 @@ class playerSettings {
             h = (1 / 25);
         };
 
-        class ButtonSyncData: Life_RscButtonMenu {
+        /*class ButtonSyncData: Life_RscButtonMenu {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};
             text = "$STR_PM_SyncData";
@@ -274,6 +274,6 @@ class playerSettings {
             y = 0.805;
             w = (6.25 / 40);
             h = (1 / 25);
-        };
+        };*/
     };
 };
