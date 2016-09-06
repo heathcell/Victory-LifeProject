@@ -143,6 +143,14 @@ class VirtualShops {
         level[] = { "", "", -1, "" };
         items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
     };
+
+    class nato {
+        name = "STR_Shops_Nato";
+        side = "nato";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
+    };
 };
 
 /*

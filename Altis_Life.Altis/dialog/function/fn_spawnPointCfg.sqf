@@ -13,8 +13,9 @@ private ["_side","_return","_spawnCfg","_curConfig","_name","_licenses","_level"
 _side = param [0,civilian,[civilian]];
 
 switch (_side) do {
-    case west: {_side = "Cop"};
-    case independent: {_side = "Medic"};
+    case independent: {_side = "Cop"};
+    case east: {_side = "Medic"};
+	case west: {_side = "NATO"};
     default {_side = "Civilian"};
 };
 

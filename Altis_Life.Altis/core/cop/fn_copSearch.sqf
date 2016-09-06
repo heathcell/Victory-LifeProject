@@ -48,7 +48,7 @@ if (count _invs > 0) then {
         [_civ getVariable ["userid",name _civ],_civ getVariable ["realname",name _civ],"481"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
     };
 
-    [0,"STR_Cop_Contraband",true,[(_civ getVariable ["realname",name _civ]),[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+    [0,"STR_Cop_Contraband",true,[(_civ getVariable ["realname",name _civ]),[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",independent];
 } else {
     _inv = localize "STR_Cop_NoIllegal";
 };

@@ -70,19 +70,22 @@ waitUntil {life_session_completed};
 
 //Set bank amount for new players
 switch (playerSide) do {
-    case west: {
+    case independent: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_cop");
     };
     case civilian: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_civ");
     };
-    case independent: {
+    case east: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
+    };
+    case west: {
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_nato");
     };
 };
 
 switch (playerSide) do {
-    case west: {
+    case independent: {
         _handle = [] spawn life_fnc_initCop;
         waitUntil {scriptDone _handle};
     };
@@ -91,7 +94,7 @@ switch (playerSide) do {
         _handle = [] spawn life_fnc_initCiv;
         waitUntil {scriptDone _handle};
     };
-    case independent: {
+    case east: {
         //Initialize Medics and blah
         _handle = [] spawn life_fnc_initMedic;
         waitUntil {scriptDone _handle};

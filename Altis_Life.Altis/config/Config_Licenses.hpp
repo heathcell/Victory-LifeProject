@@ -7,6 +7,39 @@
 *        side = side indicator
 */
 class Licenses {
+	//Nato Licenses
+    class army {
+        variable = "army";
+        displayName = "STR_License_Army";
+        price = 8000;
+        illegal = false;
+        side = "nato";
+    };
+
+    class navy {
+        variable = "navy";
+        displayName = "STR_License_Navy";
+        price = 8000;
+        illegal = false;
+        side = "nato";
+    };
+
+    class airforce {
+        variable = "airforce";
+        displayName = "STR_License_Airforce";
+        price = 8000;
+        illegal = false;
+        side = "nato";
+    };
+
+    class marinecorps {
+        variable = "marinecorps";
+        displayName = "STR_License_Marinecorps";
+        price = 8000;
+        illegal = false;
+        side = "nato";
+    };
+	
     //Civilian Licenses
     class driver {
         variable = "driver";

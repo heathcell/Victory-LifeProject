@@ -80,7 +80,7 @@ _unit spawn {
 };
 
 //Make the killer wanted
-if (!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
+if (!isNull _killer && {_killer != _unit} && {side _killer != independent} && {alive _killer}) then {
     if (vehicle _killer isKindOf "LandVehicle") then {
 
         if (life_HC_isActive) then {
@@ -113,7 +113,7 @@ _containers = nearestObjects[getPosATL player,["WeaponHolderSimulated"],5];
 {deleteVehicle _x;} forEach _containers;
 
 //Killed by cop stuff...
-if (side _killer isEqualTo west && playerSide != west) then {
+if (side _killer isEqualTo independent && playerSide != independent) then {
     life_copRecieve = _killer;
     //Did I rob the federal reserve?
     if (!life_use_atm && {CASH > 0}) then {

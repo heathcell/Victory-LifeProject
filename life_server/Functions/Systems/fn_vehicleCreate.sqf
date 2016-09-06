@@ -22,9 +22,10 @@ _type = switch (true) do {
 };
 
 _side = switch (_side) do {
-    case west:{"cop"};
+    case west: {"nato"};
     case civilian: {"civ"};
-    case independent: {"med"};
+    case independent: {"cop"};
+	case east: {"med"};
     default {"Error"};
 };
 

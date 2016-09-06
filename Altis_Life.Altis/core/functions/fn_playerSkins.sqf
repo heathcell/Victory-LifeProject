@@ -35,7 +35,7 @@ switch (playerSide) do {
         };
     };
 
-    case west: {
+    case independent: {
         if (uniform player isEqualTo "U_Rangemaster") then {
             _skinName = "textures\cop_uniform.jpg";
             if (LIFE_SETTINGS(getNumber,"cop_extendedSkins") isEqualTo 1) then {
@@ -47,7 +47,7 @@ switch (playerSide) do {
         };
     };
 
-    case independent: {
+    case east: {
         if (uniform player isEqualTo "U_Rangemaster") then {
             player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
         };

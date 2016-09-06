@@ -11,7 +11,7 @@ _packet = [player getVariable ["userid",name player],getPlayerUID player,(profil
 _array = [];
 _alive = alive player;
 _position = getPosATL player;
-_flag = switch (playerSide) do {case independent: {"cop"}; case civilian: {"civ"}; case east: {"med"}; case west: {"nato"};};
+_flag = switch (playerSide) do {case independent1: {"cop"}; case civilian1: {"civ"}; case east1: {"med"}; case west1: {"nato"};};
 
 {
     _varName = LICENSE_VARNAME(configName _x,_flag);
