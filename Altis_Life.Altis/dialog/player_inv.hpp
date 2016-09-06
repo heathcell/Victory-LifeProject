@@ -275,5 +275,15 @@ class playerSettings {
             w = (6.25 / 40);
             h = (1 / 25);
         };*/
+		
+		class ButtonTogD : Life_RscButtonMenu {
+			idc = 2099;
+			text = "ToggleTag";
+			onButtonClick = "[] call life_fnc_toggleD; closeDialog 0;";
+			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.805;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
     };
 };

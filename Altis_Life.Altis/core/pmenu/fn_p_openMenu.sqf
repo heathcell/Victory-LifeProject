@@ -33,4 +33,8 @@ if (FETCH_CONST(life_adminlevel) < 1) then {
     ctrlShow[2021,false];
 };
 
+if (FETCH_CONST(life_donorlevel) < 1) then {
+    ctrlShow[2099,false];
+};
+
 [] call life_fnc_p_updateMenu;

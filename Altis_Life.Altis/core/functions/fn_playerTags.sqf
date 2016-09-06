@@ -149,6 +149,10 @@ private _index = -1;
                     };
                 };
 				
+				if(_x getVariable ["DirectVON",false]) then {
+					_text = format ["<img image='\A3\ui_f\data\igui\rscingameui\rscdisplayvoicechat\microphone_ca.paa' size='1.5'></img><t> </t>"] + _text;
+				};
+				
 				if((_x getVariable "Drank") > 0) then {
 					private "_colour";
 					switch ((_x getVariable "Drank")) do {
@@ -158,23 +162,17 @@ private _index = -1;
 					};
 					if(_x getVariable ["DirectVON",false]) then {
 						if(side _x in [west,independent]) then {
-							_text = format ["<t color='%1'>         <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == east) then {
-							_text = format ["<t color='%1'>          <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == civilian) then {
-							_text = format ["<t color='%1'>     <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 					} else {
 						if(side _x in [west,independent]) then {
-							_text = format ["<t color='%1'>    <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == east) then {
-							_text = format ["<t color='%1'>     <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 						if(side _x == civilian) then {
-							_text = format ["<t color='%1'><img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
 						};
 					};
 				};
