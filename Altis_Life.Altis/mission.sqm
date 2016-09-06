@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1274;
+		nextID=1276;
 	};
 	class MarkerIDProvider
 	{
-		nextID=222;
+		nextID=224;
 	};
 	class Camera
 	{
-		pos[]={8451.2314,124.58219,25207.225};
-		dir[]={-0.064651057,-0.95744598,0.28136614};
-		up[]={-0.21440777,0.28864548,0.93311709};
-		aside[]={0.97462636,3.5669655e-007,0.22394545};
+		pos[]={8425.7461,245.70552,24922.666};
+		dir[]={0.15728085,-0.83484578,-0.52760851};
+		up[]={0.23849966,0.55046546,-0.80006009};
+		aside[]={-0.95836276,4.5662455e-007,-0.2856884};
 	};
 };
 binarizationWanted=0;
@@ -194,24 +194,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -226,6 +208,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -284,7 +284,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=871;
+		items=873;
 		class Item0
 		{
 			dataType="Marker";
@@ -19715,7 +19715,7 @@ class Mission
 			};
 			id=633;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.067394733;
+			atlOffset=0.067400932;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40804,6 +40804,31 @@ class Mission
 			{
 			};
 			id=1256;
+		};
+		class Item871
+		{
+			dataType="Marker";
+			position[]={11466.08,5.1487323e+011,11707.032};
+			name="nato_area";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="Horizontal";
+			a=700;
+			b=700;
+			angle=31.314999;
+			id=1274;
+			atlOffset=5.1487323e+011;
+		};
+		class Item872
+		{
+			dataType="Marker";
+			position[]={11617.672,7.4555771e+031,11941.157};
+			name="nato_base";
+			text="NATO BASE";
+			type="b_hq";
+			id=1275;
+			atlOffset=7.4555771e+031;
 		};
 	};
 };
