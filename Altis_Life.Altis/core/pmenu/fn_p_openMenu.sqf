@@ -23,10 +23,18 @@ switch (playerSide) do {
         ctrlShow[2012,false];
         ctrlShow[2011,false];
     };
+	
+	case west: {
+        ctrlShow[2011,false];
+    };
 };
 
 if (FETCH_CONST(life_adminlevel) < 1) then {
     ctrlShow[2021,false];
+};
+
+if (FETCH_CONST(life_donorlevel) < 1) then {
+    ctrlShow[2099,false];
 };
 
 [] call life_fnc_p_updateMenu;

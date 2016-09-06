@@ -26,6 +26,7 @@ if ([false,_type,_amount] call life_fnc_handleInv) then {
     CASH = CASH + _price;
     [0] call SOCK_fnc_updatePartial;
     [] call life_fnc_virt_update;
+	[] call life_fnc_hudUpdate;
 };
 
 if (life_shop_type isEqualTo "drugdealer") then {

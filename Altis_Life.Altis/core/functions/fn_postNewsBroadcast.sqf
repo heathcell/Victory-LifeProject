@@ -28,5 +28,6 @@ if (_badCharacter) exitWith {hint localize "STR_News_UnsupportedCharacter"};
 
 CASH = CASH - LIFE_SETTINGS(getNumber,"news_broadcast_cost");
 [0] call SOCK_fnc_updatePartial;
+[] call life_fnc_hudUpdate;
 life_broadcastTimer = time;
 publicVariable "life_broadcastTimer";

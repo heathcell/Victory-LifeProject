@@ -71,10 +71,12 @@ if ((BANK - (_fueltoput * life_fuelPrices))> 0)then {
         life_is_processing = false;
         life_action_inUse = false;
         [0] call SOCK_fnc_updatePartial;
+		[] call life_fnc_hudUpdate;
         closeDialog 0;
     } else {
         life_is_processing = false;
         [0] call SOCK_fnc_updatePartial;
+		[] call life_fnc_hudUpdate;
     };
 } else {
     hint localize "STR_NOTF_NotEnoughMoney";

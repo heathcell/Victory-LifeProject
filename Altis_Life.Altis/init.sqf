@@ -18,5 +18,6 @@ StartProgress = false;
         sleep 10;
     };
 };
+[] spawn life_fnc_showDirectVON;
 
 StartProgress = true;

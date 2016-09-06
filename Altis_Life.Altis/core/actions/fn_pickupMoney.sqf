@@ -24,6 +24,7 @@ if (!isNil "_value") exitWith {
     titleText[format [localize "STR_NOTF_PickedMoney",[_value] call life_fnc_numberText],"PLAIN"];
     CASH = CASH + _value;
     [0] call SOCK_fnc_updatePartial;
+	[] call life_fnc_hudUpdate;
     life_action_delay = time;
 
     if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
