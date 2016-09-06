@@ -79,6 +79,9 @@ switch (playerSide) do {
     case east: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
     };
+    case west: {
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_nato");
+    };
 };
 
 switch (playerSide) do {
