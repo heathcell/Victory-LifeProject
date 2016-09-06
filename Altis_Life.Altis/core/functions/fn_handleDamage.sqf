@@ -46,5 +46,29 @@ if (!isNull _source) then {
     };
 };
 
+//anti vdm
+if (vehicle _unit == _unit) then {
+	if ({_unit distance getMarkerPos (_x select 0) < _x select 1 } count SAFETY_ZONES > 0) then {
+		_isVehicle = vehicle _source;
+		if ((_isVehicle isKindOf "Air" OR _isVehicle isKindOf "Car" OR _isVehicle isKindOf "Boat" OR _isVehicle isKindOf "Armored") && !( _source isKindOf "Air" OR _source isKindOf "Car" OR _source isKindOf "Boat" )) then 
+		{
+			_damage = false;
+			//[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] call life_fnc_MP;
+			[player,"amovppnemstpsraswrfldnon"] remoteExecCall ["life_fnc_animSync",RCLIENT];
+			if(isNil "life_msg_time") then {life_msg_time = false;};
+			if(!life_msg_time) then 
+			{ 
+				//[[0,format["%1 has been drive-by BY %2", _unit getVariable["realname",name _unit], _source getVariable["realname",name _source]]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+				[0,format["%1 has been drive-by BY %2", _unit getVariable["realname",name _unit], _source getVariable["realname",name _source]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+				[] spawn
+				{
+					sleep (10);
+					life_msg_time = false;
+				};
+			};
+		};
+	};
+};
+
 [] spawn life_fnc_hudUpdate;
 _damage;
