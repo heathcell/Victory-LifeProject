@@ -20,3 +20,11 @@ if (_ammoType isEqualTo "GrenadeHand_stone") then {
         [_position] remoteExec ["life_fnc_flashbang",RCLIENT];
     };
 };
+
+if(playerSide in [civilian,east]) then {
+	if ({(_this select 0) distance getMarkerPos (_x select 0) < _x select 1} count SAFETY_ZONES > 0) then
+	{
+		deleteVehicle (_this select 6);
+		titleText [SZ_MESSAGE, "PLAIN", 3];
+	};
+};

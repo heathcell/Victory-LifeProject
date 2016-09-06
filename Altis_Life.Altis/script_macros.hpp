@@ -49,3 +49,7 @@
 
 //Map Macros
 #define ALTIS_TANOA(var1,var2) if (worldName == "Altis") then {var1} else {var2}
+
+//Safe Zone
+#define SAFETY_ZONES [["safezone", 600], ["safezone_2", 75]]
+#define SZ_MESSAGE "You Are In A Safe Zone! Live rounds disabled"
