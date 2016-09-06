@@ -17,6 +17,21 @@ diag_log "----------------------------------------------------------------------
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log "------------------------------------------ Version 4.5 -------------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
+//Check Addons
+_life_nativechecker = 0;
+for "_i" from 0 to (count (configFile / "CfgPatches") - 1) do 
+{
+	_cfg_entry = (configFile / "CfgPatches") select _i;
+
+	if (isClass _cfg_entry) then
+	{
+		_life_nativechecker = _life_nativechecker + 1;
+	};
+};
+diag_log "---------------------------";
+diag_log format ["CfgPatches = %1  ", _life_nativechecker];
+diag_log "----------------------------";
+//if(!(_life_nativechecker == 1523)) exitWith { ["noAddons",false,true] call BIS_fnc_endMission; };
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
 [] call compile preprocessFileLineNumbers "core\clientValidator.sqf";
 enableSentences false;

@@ -11,7 +11,7 @@ private ["_unit","_id","_uid","_name","_alive","_position","_side"];
 _unit = _this select 0;
 if (isNull _unit) exitWith {};
 _id = _this select 1;
-_uid = _this select 2;
+_uid = _unit getVariable ["userid",name _unit];
 _name = _this select 3;
 _side = side _unit;
 
