@@ -49,8 +49,16 @@ life_is_arrested = true;
 if (LIFE_SETTINGS(getNumber,"jail_seize_inventory") isEqualTo 1) then {
     [] spawn life_fnc_seizeClient;
 } else {
-    removeAllWeapons player;
-    {player removeMagazine _x} forEach (magazines player);
+	removeAllWeapons player;
+	{player removeMagazine _x} forEach (magazines player);
+	removeUniform player;
+	removeVest player;
+	removeBackpack player;
+	removeGoggles player;
+	removeHeadGear player;
+	removeAllAssignedItems player;
+	removeAllItems player;
+	player addUniform "A3L_Prisoner_Outfit";	
 };
 
 if (life_HC_isActive) then {
