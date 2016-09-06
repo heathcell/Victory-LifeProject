@@ -19,7 +19,7 @@ _gangName = group player getVariable "gang_name";
 _gangBank = GANG_FUNDS;
 _gangMax = group player getVariable "gang_maxMembers";
 
-if (_ownerID != getPlayerUID player) then {
+if (_ownerID != USERID) then {
     (CONTROL(2620,2622)) ctrlEnable false; //Upgrade
     (CONTROL(2620,2624)) ctrlEnable false; // Kick
     (CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
@@ -34,7 +34,7 @@ if (_ownerID != getPlayerUID player) then {
 _members = CONTROL(2620,2621);
 lbClear _members;
 {
-    if ((getPlayerUID _x) == _ownerID) then {
+    if ((_x getVariable ["userid",name _x]) == _ownerID) then {
         _members lbAdd format ["%1 " +(localize "STR_GNOTF_GangLeader"),(_x getVariable ["realname",name _x])];
         _members lbSetData [(lbSize _members)-1,str(_x)];
     } else {

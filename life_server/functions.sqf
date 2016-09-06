@@ -28,7 +28,7 @@ compileFinal "
     if (isNull _ret) exitWith {};
     if (isNil ""_ret"") exitWith {};
 
-    [life_atmbank,life_cash,owner player,player,profileNameSteam,getPlayerUID player,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
+    [life_atmbank,life_cash,owner player,player,profileNameSteam,profileName,playerSide] remoteExecCall [""life_fnc_adminInfo"",_ret];
 ";
 publicVariable "TON_fnc_player_query";
 publicVariable "TON_fnc_index";
@@ -76,7 +76,7 @@ compileFinal "
         _name = getText(configFile >> ""CfgVehicles"" >> (typeOf _vehicle) >> ""displayName"");
         hint format [""%1 has gave you keys for a %2"",_giver,_name];
         life_vehicles pushBack _vehicle;
-        [getPlayerUID player,playerSide,_vehicle,1] remoteExecCall [""TON_fnc_keyManagement"",2];
+        [profileName,playerSide,_vehicle,1] remoteExecCall [""TON_fnc_keyManagement"",2];
     };
 ";
 
@@ -324,7 +324,7 @@ TON_fnc_MapMarkersAdmin = compileFinal "
       if ((vehicle _x isKindOf ""LandVehicle"") || (vehicle _x isKindOf ""Air"") || (vehicle _x isKindOf ""Ship"")) then {
         if (count(crew vehicle _x) > 0) then {
           {
-            if (!(_x in life_markers_Vehicles) && (alive _x) && (getPlayerUID _x != """")) then {
+            if (!(_x in life_markers_Vehicles) && (alive _x) && (_x getVariable [""userid"",name _x] != """")) then {
               private [""_pos"", ""_Markers"", ""_Vehicle""];
               _Vehicle = vehicle _x;
               _pos = visiblePosition _x;
@@ -349,7 +349,7 @@ TON_fnc_MapMarkersAdmin = compileFinal "
                 _Marker = _this select 1;
                                 _TypeVehicle = _this select 3;
                                 for ""_i"" from 0 to 1 step 0 do {
-                                    if (!life_markers && !(alive _PlayersOrVehicles) && (vehicle _PlayersOrVehicles == _PlayersOrVehicles) && (getPlayerUID _PlayersOrVehicles != """")) exitWith {};
+                                    if (!life_markers && !(alive _PlayersOrVehicles) && (vehicle _PlayersOrVehicles == _PlayersOrVehicles) && (_PlayersOrVehicles getVariable [""userid"",name _PlayersOrVehicles] != """")) exitWith {};
                   _CrewVehicle = ((crew vehicle _PlayersOrVehicles) find _PlayersOrVehicles);
                   _Marker setMarkerPosLocal([(visiblePosition _PlayersOrVehicles select 0) + 20, (visiblePosition _PlayersOrVehicles select 1) - (25 + _CrewVehicle * 20), 0]);
                                     _Marker setMarkerTextLocal format ['%1---%2---%3m', name _PlayersOrVehicles, _TypeVehicle, round(_PlayersOrVehicles distance player)];
@@ -365,7 +365,7 @@ TON_fnc_MapMarkersAdmin = compileFinal "
           } forEach crew vehicle _x;
         };
       } else {
-        if (!(_x in life_markers_Players) && (vehicle _x == _x) && (getPlayerUID _x != """")) then {
+        if (!(_x in life_markers_Players) && (vehicle _x == _x) && (_x getVariable [""userid"",name _x] != """")) then {
           private [""_pos"", ""_Markers""];
           _pos = visiblePosition _x;
           _Markers = createMarkerLocal[format [""PLR%1%2"", _pos select 0, _pos select 1], [(_pos select 0) + 20, _pos select 1, 0]];
@@ -390,7 +390,7 @@ TON_fnc_MapMarkersAdmin = compileFinal "
             _PlayersOrVehicles = _this select 0;
             _Marker = _this select 1;
                         for ""_i"" from 0 to 1 step 0 do {
-                            if (!life_markers && !(alive _PlayersOrVehicles) && (vehicle _PlayersOrVehicles != _PlayersOrVehicles) && (getPlayerUID _PlayersOrVehicles != """")) exitWith {};
+                            if (!life_markers && !(alive _PlayersOrVehicles) && (vehicle _PlayersOrVehicles != _PlayersOrVehicles) && (_PlayersOrVehicles getVariable [""userid"",name _PlayersOrVehicles] != """")) exitWith {};
               _Marker setMarkerPosLocal([visiblePosition _PlayersOrVehicles select 0, visiblePosition _PlayersOrVehicles select 1, 0]);
               _Marker setMarkerTextLocal format [""%1---%2"", name _PlayersOrVehicles, round(_PlayersOrVehicles distance player)];
               sleep 0.01;

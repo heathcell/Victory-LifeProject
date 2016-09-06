@@ -10,9 +10,9 @@
 */
 private ["_mode","_packet","_array","_flag"];
 _mode = param [0,0,[0]];
-_packet = [getPlayerUID player,playerSide,nil,_mode];
+_packet = [USER,playerSide,nil,_mode];
 _array = [];
-_flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
+_flag = switch (playerSide) do {case independent: {"cop"}; case civilian: {"civ"}; case east: {"med"}; case west: {"nato"};};
 
 switch (_mode) do {
     case 0: {
@@ -52,6 +52,7 @@ switch (_mode) do {
     };
 
     case 7: {
+		_packet set[4,profileName];
         // Tonic is using for keychain..?
     };
 };

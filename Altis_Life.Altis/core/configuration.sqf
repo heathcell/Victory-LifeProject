@@ -45,9 +45,10 @@ life_preview_3D_vehicle_object = objNull;
 life_preview_light = objNull;
 life_pos_exist = false;
 life_pos_attach = [];
-life_civ_position = [];
+life_position = [];
 life_markers = false;
 life_canpay_bail = true;
+life_is_position = true;
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast",true];

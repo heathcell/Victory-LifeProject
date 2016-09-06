@@ -13,7 +13,7 @@ _vehicle = lbData[2802,(lbCurSel 2802)];
 _vehicle = (call compile format ["%1",_vehicle]) select 0;
 _vehicleLife = _vehicle;
 _vid = lbValue[2802,(lbCurSel 2802)];
-_pid = getPlayerUID player;
+_pid = USERID;
 
 if (isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 if ((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay";};

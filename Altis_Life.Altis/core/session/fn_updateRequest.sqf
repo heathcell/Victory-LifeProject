@@ -7,11 +7,11 @@
     Passes ALL player information to the server to save player data to the database.
 */
 private ["_packet","_array","_flag","_alive","_position"];
-_packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
+_packet = [player getVariable ["userid",name player],getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _alive = alive player;
 _position = getPosATL player;
-_flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
+_flag = switch (playerSide) do {case independent: {"cop"}; case civilian: {"civ"}; case east: {"med"}; case west: {"nato"};};
 
 {
     _varName = LICENSE_VARNAME(configName _x,_flag);
@@ -28,12 +28,12 @@ _array pushBack life_hunger;
 _array pushBack life_thirst;
 _array pushBack (damage player);
 _packet pushBack _array;
+_packet pushBack _position;
 
 switch (playerSide) do {
     case civilian: {
         _packet pushBack life_is_arrested;
         _packet pushBack _alive;
-        _packet pushBack _position;
     };
 };
 

@@ -104,7 +104,7 @@ _vehicle lock 2;
 [_vehicle,_colorIndex] call life_fnc_colorVehicle;
 [_vehicle] call life_fnc_clearVehicleAmmo;
 [_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
-[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
+[_vehicle,"vehicle_info_owners",[[USERID,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 
 //Side Specific actions.
@@ -127,14 +127,14 @@ _vehicle allowDamage true;
 life_vehicles pushBack _vehicle;
 
 //Always handle key management by the server
-[getPlayerUID player,playerSide,_vehicle,1] remoteExecCall ["TON_fnc_keyManagement",RSERV];
+[USERID,playerSide,_vehicle,1] remoteExecCall ["TON_fnc_keyManagement",RSERV];
 
 if (_mode) then {
     if (!(_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly")))) then {
         if (life_HC_isActive) then {
-            [(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["HC_fnc_vehicleCreate",HC_Life];
+            [(USERID),playerSide,_vehicle,_colorIndex] remoteExecCall ["HC_fnc_vehicleCreate",HC_Life];
         } else {
-            [(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
+            [(USERID),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
         };
     };
 };

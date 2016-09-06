@@ -9,7 +9,7 @@
 */
 private ["_house","_uid","_action","_houseCfg"];
 _house = param [0,objNull,[objNull]];
-_uid = getPlayerUID player;
+_uid = USERID;
 
 if (isNull _house) exitWith {};
 if (!(_house isKindOf "House_F")) exitWith {};

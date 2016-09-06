@@ -13,7 +13,7 @@ _vehicle = lbData[2802,(lbCurSel 2802)];
 _vehicle = (call compile format ["%1",_vehicle]) select 0;
 _vehicleLife = _vehicle;
 _vid = lbValue[2802,(lbCurSel 2802)];
-_pid = getPlayerUID player;
+_pid = USERID;
 _unit = player;
 _spawntext = localize "STR_Garage_spawn_Success";
 if (isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};

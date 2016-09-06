@@ -9,11 +9,11 @@
 */
 private ["_container","_isFloating","_type","_house","_containers","_houseCfg","_message","_isPlaced"];
 params [
-        ["_container",objNull,[objNull]],
-        ["_isFloating",true,[true]]
+	["_container",objNull,[objNull]],
+	["_isFloating",true,[true]]
 ];
 
-_uid = getPlayerUID player;
+_uid = USERID;
 _house = nearestObject [player, "House"];
 
 switch (true) do {
