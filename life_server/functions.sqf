@@ -130,7 +130,7 @@ private [""_msg"",""_to""];
     _to = ""EMS Units"";
     if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3022,true];};
 
-    [_msg,name player,5,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",independent];
+    [_msg,name player,5,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",east];
     [] call life_fnc_cellphone;
     hint format [""You have sent a message to all EMS Units."",_to,_msg];
     ctrlShow[3022,true];
@@ -247,7 +247,7 @@ compileFinal "
         };
 
         case 1 : {
-            if (side player != west) exitWith {};
+            if (side player != independent) exitWith {};
             private [""_message"",""_loc"",""_unit""];
             _loc = _this select 3;
             _unit = _this select 4;
@@ -295,7 +295,7 @@ compileFinal "
         };
 
         case 5: {
-            if (side player != independent) exitWith {};
+            if (side player != east) exitWith {};
             private [""_message"",""_loc"",""_unit""];
             _loc = _this select 3;
             _unit = _this select 4;
@@ -332,13 +332,13 @@ TON_fnc_MapMarkersAdmin = compileFinal "
               _TypeVehicle = (getText(configFile >> 'CfgVehicles' >> (typeOf vehicle _x) >> 'displayName'));
               _Markers setMarkerTextLocal format ['%1---%2---%3m', name _x, _TypeVehicle, round(_x distance player)];
               _Markers setMarkerTypeLocal ""mil_dot"";
-              if (side _x isEqualTo independent) then {
+              if (side _x isEqualTo east) then {
                 _Markers setMarkerColorLocal (""ColorIndependent"");
               };
               if (side _x isEqualTo civilian) then {
                 _Markers setMarkerColorLocal (""ColorCivilian"");
               };
-              if (side _x isEqualTo west) then {
+              if (side _x isEqualTo independent) then {
                 _Markers setMarkerColorLocal (""ColorBLUFOR"");
               };
               _Markers setMarkerSizeLocal[1, 1];
@@ -371,13 +371,13 @@ TON_fnc_MapMarkersAdmin = compileFinal "
           _Markers = createMarkerLocal[format [""PLR%1%2"", _pos select 0, _pos select 1], [(_pos select 0) + 20, _pos select 1, 0]];
           _Markers setMarkerTypeLocal ""mil_dot"";
           _Markers setMarkerSizeLocal[1, 1];
-          if (side _x isEqualTo independent) then {
+          if (side _x isEqualTo east) then {
             _Markers setMarkerColorLocal (""ColorIndependent"");
           };
           if (side _x isEqualTo civilian) then {
             _Markers setMarkerColorLocal (""ColorCivilian"");
           };
-          if (side _x isEqualTo west) then {
+          if (side _x isEqualTo independent) then {
             _Markers setMarkerColorLocal (""ColorBLUFOR"");
           };
           _Markers setMarkerTextLocal format [""%1---%2"", name _x, round(_x distance player)];
