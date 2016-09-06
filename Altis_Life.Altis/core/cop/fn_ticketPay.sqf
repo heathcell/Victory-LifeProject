@@ -33,6 +33,7 @@ if (CASH < life_ticket_val) exitWith {
 
 CASH = CASH - life_ticket_val;
 [0] call SOCK_fnc_updatePartial;
+[] call life_fnc_hudUpdate;
 life_ticket_paid = true;
 
 if (life_HC_isActive) then {
