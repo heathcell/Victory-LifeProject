@@ -28,17 +28,17 @@ switch (playerSide) do {
         _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_CIVILIAN");
         _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
     };
-    case west: {
+    case independent: {
         _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_COP");
         _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
     };
-    case independent: {
+    case east: {
         _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_MEDIC");
         _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
     };
-    case east: {
-        _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_OPFOR");
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
+    case west: {
+        _multiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_NATO");
+        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_NATO");
     };
 };
 

@@ -66,13 +66,13 @@ if (LIFE_SETTINGS(getNumber,"save_position") isEqualTo 1) then {
 };
 //Parse side specific information.
 switch (playerSide) do {
-    case independent: {
+    case independent1: {
         CONST(life_coplevel, parseNumber(_this select 10));
         CONST(life_medicLevel,0);
         CONST(life_natoLevel,0);
     };
 
-    case civilian: {
+    case civilian1: {
 		life_is_arrested = _this select 10;
 		life_is_alive = _this select 14;
 		CONST(life_coplevel, 0);
@@ -92,13 +92,13 @@ switch (playerSide) do {
         [] spawn life_fnc_initHouses;
     };
 
-    case east: {
+    case east1: {
         CONST(life_medicLevel, parseNumber(_this select 10));
         CONST(life_coplevel,0);
         CONST(life_natoLevel,0);
     };
 
-    case west: {
+    case west1: {
         CONST(life_natoLevel, parseNumber(_this select 10));
         CONST(life_coplevel,0);
         CONST(life_medicLevel,0);

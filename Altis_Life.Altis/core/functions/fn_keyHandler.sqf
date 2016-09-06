@@ -80,8 +80,8 @@ switch (_code) do {
     //Map Key
     case _mapKey: {
         switch (playerSide) do {
-            case west: {if (!visibleMap) then {[] spawn life_fnc_copMarkers;}};
-            case independent: {if (!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+            case independent: {if (!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+            case east: {if (!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
             case civilian: {if (!visibleMap) then {[] spawn life_fnc_civMarkers;}};
         };
     };
@@ -116,7 +116,7 @@ switch (_code) do {
     //Restraining (Shift + R)
     case 19: {
         if (_shift) then {_handled = true;};
-        if (_shift && playerSide isEqualTo west && {!isNull cursorObject} && {cursorObject isKindOf "Man"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,independent])} && {alive cursorObject} && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
+        if (_shift && playerSide isEqualTo independent && {!isNull cursorObject} && {cursorObject isKindOf "Man"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,east])} && {alive cursorObject} && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
             [] call life_fnc_restrainAction;
         };
     };
@@ -163,10 +163,10 @@ switch (_code) do {
     //L Key?
     case 38: {
         //If cop run checks for turning lights on.
-        if (_shift && playerSide in [west,independent]) then {
+        if (_shift && playerSide in [independent,east]) then {
             if (vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"]) then {
                 if (!isNil {vehicle player getVariable "lights"}) then {
-                    if (playerSide isEqualTo west) then {
+                    if (playerSide isEqualTo independent) then {
                         [vehicle player] call life_fnc_sirenLights;
                     } else {
                         [vehicle player] call life_fnc_medicSirenLights;
@@ -188,7 +188,7 @@ switch (_code) do {
 
     //F Key
     case 33: {
-        if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
+        if (playerSide in [independent,east] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
             [] spawn {
                 life_siren_active = true;
                 sleep 4.7;
@@ -203,7 +203,7 @@ switch (_code) do {
             } else {
                 titleText [localize "STR_MISC_SirensON","PLAIN"];
                 _veh setVariable ["siren",true,true];
-                if (playerSide isEqualTo west) then {
+                if (playerSide isEqualTo independent) then {
                     [_veh] remoteExec ["life_fnc_copSiren",RCLIENT];
                 } else {
                     [_veh] remoteExec ["life_fnc_medicSiren",RCLIENT];

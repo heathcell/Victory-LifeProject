@@ -142,10 +142,10 @@ class LifeCfgVehicles {
     *       GarageSell: Payout = price * [0.5, 0.5, 0.5, -1]
     *       Cop Impound: Payout = price * 0.1
     *       Pull Vehicle from Garage: Cost = price * [1, 0.5, 0.75, -1] * [0.5, 0.5, 0.5, -1]
-    *           -- Pull Vehicle & GarageSell Array Explanation = [civ,cop,medic,east]
+    *           -- Pull Vehicle & GarageSell Array Explanation = [civ,cop,medic,west]
     *
     *       1: ARRAY (license required)
-    *         Ex: { "driver", "" , "" , "" } //civilian, west, independent, east
+    *         Ex: { "driver", "" , "" , "" } //civilian, independent, east, west
     *         licenses[] = { {"CIV"}, {"COP"}, {"MEDIC"}, {"EAST"} };
     *    Textures config follows { Texture Name, side, {texture(s)path}}
     *    Texture(s)path follows this format:

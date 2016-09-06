@@ -15,7 +15,7 @@ waitUntil {scriptDone _handle};
 
 if (count _itemArray isEqualTo 0) exitWith {
     switch (playerSide) do {
-        case west: {
+        case independent: {
             [] call life_fnc_copLoadout;
         };
 
@@ -23,7 +23,7 @@ if (count _itemArray isEqualTo 0) exitWith {
             [] call life_fnc_civLoadout;
         };
 
-        case independent: {
+        case east: {
             [] call life_fnc_medicLoadout;
         };
     };

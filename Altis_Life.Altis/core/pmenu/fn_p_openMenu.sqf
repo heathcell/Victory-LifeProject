@@ -11,7 +11,7 @@ createDialog "playerSettings";
 disableSerialization;
 
 switch (playerSide) do {
-    case west: {
+    case independent: {
         ctrlShow[2011,false];
     };
 
@@ -19,7 +19,7 @@ switch (playerSide) do {
         ctrlShow[2012,false];
     };
 
-    case independent: {
+    case east: {
         ctrlShow[2012,false];
         ctrlShow[2011,false];
     };

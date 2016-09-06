@@ -20,7 +20,7 @@ life_shop_type = _this select 3;
 life_shop_npc = _this select 0;
 
 if (!(_shopSide isEqualTo "")) then {
-    _flag = switch (playerSide) do {case west: {"cop"}; case independent: {"med"}; default {"civ"};};
+    _flag = switch (playerSide) do {case independent: {"cop"}; case east: {"med"}; default {"civ"};};
     if (!(_flag isEqualTo _shopSide)) then {_exit = true;};
 };
 if (_exit) exitWith {};

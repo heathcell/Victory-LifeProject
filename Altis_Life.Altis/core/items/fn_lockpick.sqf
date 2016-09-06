@@ -99,7 +99,7 @@ if (!_isVehicle) then {
             [USERID,profileName,"215"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
 
-        [0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",west];
+        [0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",independent];
         titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
     };
 };

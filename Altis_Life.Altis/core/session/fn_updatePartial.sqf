@@ -12,7 +12,7 @@ private ["_mode","_packet","_array","_flag"];
 _mode = param [0,0,[0]];
 _packet = [USER,playerSide,nil,_mode];
 _array = [];
-_flag = switch (playerSide) do {case independent: {"cop"}; case civilian: {"civ"}; case east: {"med"}; case west: {"nato"};};
+_flag = switch (playerSide) do {case independent1: {"cop"}; case civilian1: {"civ"}; case east1: {"med"}; case west1: {"nato"};};
 
 switch (_mode) do {
     case 0: {
