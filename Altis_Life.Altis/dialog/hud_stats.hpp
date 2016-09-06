@@ -1,88 +1,141 @@
-#define ST_CENTER         0x02
-/*
-    Author: Daniel Stuart
-
-    File: hud_stats.hpp
-*/
-
-class playerHUD {
-    idd = -1;
-    duration = 10e10;
-    movingEnable = 0;
-    fadein = 0;
-    fadeout = 0;
-    name = "playerHUD";
-    onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
-    objects[] = {};
-    controls[] = {
-        Life_RscBackground_HUD,
-        Life_RscProgress_HUDFood,
-        Life_RscProgress_HUDHealth,
-        Life_RscProgress_HUDWater,
-        Life_RscText_HUDFood,
-        Life_RscText_HUDHealth,
-        Life_RscText_HUDWater
-    };
-
-    /* Background */
-    class Life_RscBackground_HUD: Life_RscBackground {
-        colorBackground[] = {0,0,0,0.35};
-        x = 0.414815 * safezoneW + safezoneX;
-        y = 0.966667 * safezoneH + safezoneY;
-        w = 0.170371 * safezoneW;
-        h = 0.0333333 * safezoneH;
-    };
-
-    /* Progress Bars */
-    class LIFE_RscProgress_HUDCommon: Life_RscProgress {
-        colorFrame[] = {0, 0, 0, 0.8};
-        y = 0.972223 * safezoneH + safezoneY;
-        w = 0.0462964 * safezoneW;
-        h = 0.0222222 * safezoneH;
-    };
-
-    class Life_RscProgress_HUDFood: LIFE_RscProgress_HUDCommon {
-        idc = 2200;
-        colorBar[] = {0,0.50,0,0.65};
-        x = 0.418981 * safezoneW + safezoneX;
-    };
-
-    class Life_RscProgress_HUDHealth: LIFE_RscProgress_HUDCommon {
-        idc = 2201;
-        colorBar[] = {0.85,0.05,0,0.65};
-        x = 0.476852 * safezoneW + safezoneX;
-    };
-
-    class Life_RscProgress_HUDWater: LIFE_RscProgress_HUDCommon {
-        idc = 2202;
-        colorBar[] = {0,0.25,0.65,0.65};
-        x = 0.534723 * safezoneW + safezoneX;
-    };
-
-    /* Texts */
-    class Life_RscText_HUDCommon: Life_RscText {
-        SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-        style = ST_CENTER;
-        y = 0.970023 * safezoneH + safezoneY;
-        w = 0.0462964 * safezoneW;
-        h = 0.0222222 * safezoneH;
-    };
-
-    class Life_RscText_HUDFood: Life_RscText_HUDCommon {
-        idc = 1200;
-        text = "$STR_HUD_Food";
-        x = 0.418981 * safezoneW + safezoneX;
-    };
-
-    class Life_RscText_HUDHealth: Life_RscText_HUDCommon {
-        idc = 1201;
-        text = "$STR_HUD_Health";
-        x = 0.476852 * safezoneW + safezoneX;
-    };
-
-    class Life_RscText_HUDWater: Life_RscText_HUDCommon {
-        idc = 1202;
-        text = "$STR_HUD_Water";
-        x = 0.534723 * safezoneW + safezoneX;
-    };
+#define COLOR_HALF_BLACK { 0, 0, 0, 0.5 }
+	
+class playerHUD
+{
+	idd=-1;
+	movingEnable=0;
+	fadein=0;
+	duration = 999999;
+	fadeout=0;
+	name="playerHUD";
+	onLoad="uiNamespace setVariable ['playerHUD',_this select 0]";
+	objects[]={};
+	
+	
+	class controlsBackground 
+	{
+		class foodHIcon : life_RscPicture 
+		{
+		
+			idc = -1;
+			text = "icons\HUD\food.paa";
+			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.400;
+			w = 0.032; h = 0.042;
+			colorBackground[] = COLOR_HALF_BLACK;
+		};
+		
+		class waterHIcon : life_RscPicture 
+		{
+		
+			idc = -1;
+			text = "icons\HUD\water.paa";
+			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.353;
+			w = 0.032; h = 0.042;
+			colorBackground[] = COLOR_HALF_BLACK;
+		};
+		
+		class healthHIcon : life_RscPicture
+		{
+			
+			idc = -1;
+			text = "icons\HUD\salud.paa";
+			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.306;
+			w = 0.032; h = 0.042;
+			colorBackground[] = COLOR_HALF_BLACK;
+		};
+		
+		class geldIcon : life_RscPicture
+		{
+			
+			idc = -1;
+			text = "icons\HUD\argent.paa";
+			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.259;
+			w = 0.032; h = 0.042;
+			colorBackground[] = COLOR_HALF_BLACK;
+		};
+		
+		/*class badpicture : life_RscPicture
+		{
+			
+			idc = -1;
+			text = "BadPicture";
+			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.450;
+			w = 0.032; h = 0.042;
+		};*/
+	};
+	
+	class controls
+	{
+		class foodtext
+		{
+			type=0;
+			idc=23500;
+			style=0;
+			x=-1;
+			y=-1;
+			w=0.3;
+			h=0.04;
+			sizeEx=0.03;
+			size=1;
+			font="PuristaSemibold";
+			colorBackground[] = COLOR_HALF_BLACK;
+			colorText[] = { 1 , 1 , 1 , 1 };
+			shadow=true;
+			text="";
+		};
+		
+		class watertext
+		{
+			type=0;
+			idc=23510;
+			style=0;
+			x=-1;
+			y=-1;
+			w=0.3;
+			h=0.04;
+			sizeEx=0.03;
+			size=1;
+			font="PuristaSemibold";
+			colorBackground[] = COLOR_HALF_BLACK;
+			colorText[] = { 1 , 1 , 1 , 1 };
+			shadow=true;
+			text="";
+		};
+		
+		class healthtext
+		{
+			type=0;
+			idc=23515;
+			style=0;
+			x=-1;
+			y=-1;
+			w=0.3;
+			h=0.04;
+			sizeEx=0.03;
+			size=1;
+			font="PuristaSemibold";
+			colorBackground[] = COLOR_HALF_BLACK;
+			colorText[] = { 1 , 1 , 1 , 1 };
+			shadow=true;
+			text="";
+		};
+		
+		class geldtext
+		{
+			type=0;
+			idc=23520;
+			style=0;
+			x=-1;
+			y=-1;
+			w=0.3;
+			h=0.04;
+			sizeEx=0.03;
+			size=1;
+			font="PuristaSemibold";
+			colorBackground[] = COLOR_HALF_BLACK;
+			colorText[] = { 1 , 1 , 1 , 1 };
+			shadow=true;
+			text="";			
+		};
+	}; 
 };
