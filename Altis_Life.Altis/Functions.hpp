@@ -158,6 +158,8 @@ class Life_Client_Core {
         class unimpound {};
         class vehicleGarage {};
         class wireTransfer {};
+        class checkpass {};
+        class login {};
     };
 
     class Functions {

@@ -68,6 +68,10 @@ waitUntil {life_session_completed};
 //diag_log "::Life Client:: Group Base Execution";
 [] spawn life_fnc_escInterupt;
 
+//login system
+[] call life_fnc_login;
+waitUntil {life_login_completed};
+
 //Set bank amount for new players
 switch (playerSide) do {
     case west: {
