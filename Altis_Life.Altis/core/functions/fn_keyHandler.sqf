@@ -44,6 +44,9 @@ if (!(count (actionKeys "User10") isEqualTo 0) && {(inputAction "User10" > 0)}) 
     true;
 };
 
+//Tactical View
+if((_code in (actionKeys "SelectAll") || _code in (actionKeys "ForceCommandingMode") || _code in (actionKeys "tacticalView"))) then {_handled = true;};
+
 if (life_container_active) then {
     switch (_code) do {
         //space key
