@@ -19,6 +19,8 @@ class Life_Client_Core {
         class initCiv {};
         class initCop {};
         class initMedic {};
+		class initNato {};
+		class initZeus {};
         class setupActions {};
         class setupEVH {};
         class survival {};
@@ -278,6 +280,12 @@ class Life_Client_Core {
         class revived {};
         class revivePlayer {};
     };
+	
+	class Nato {
+		file = "core\nato";
+		class natoMarkers {};
+		class natoLoadout {};
+	};
 
     class Network {
         file = "core\functions\network";
