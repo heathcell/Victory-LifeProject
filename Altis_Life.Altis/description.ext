@@ -1,4 +1,5 @@
 disableChannels[]={{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
+respawnButton = 0;
 
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
