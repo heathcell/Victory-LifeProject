@@ -13,7 +13,7 @@ if (isNull _vault) exitWith {}; //Bad object
 if (typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_Blast_VaultOnly"};
 if (_vault getVariable ["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if (_vault getVariable ["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
-if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
+if (independent countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
      hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))]
 };
 
@@ -26,8 +26,8 @@ if ((nearestObject [_pos,_vaultHouse]) getVariable ["locked",true]) exitWith {hi
 if (!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
 _vault setVariable ["chargeplaced",true,true];
-[0,"STR_ISTR_Blast_Placed"] remoteExecCall ["life_fnc_broadcast",west];
+[0,"STR_ISTR_Blast_Placed"] remoteExecCall ["life_fnc_broadcast",independent];
 hint localize "STR_ISTR_Blast_KeepOff";
 
-[] remoteExec ["life_fnc_demoChargeTimer",[west,player]];
+[] remoteExec ["life_fnc_demoChargeTimer",[independent,player]];
 [] remoteExec ["TON_fnc_handleBlastingCharge",2];

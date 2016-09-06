@@ -17,9 +17,9 @@ _shopSide = M_CONFIG(getText,"CarShops",(life_veh_shop select 0),"side");
 
 _licenses = switch (playerSide) do {
     case civilian: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 0)};
-    case west: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 1)};
-    case independent: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 2)};
-    case east: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 3)};
+    case independent: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 1)};
+    case east: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 2)};
+    case west: {(M_CONFIG(getArray,"LifeCfgVehicles",_className,"licenses") select 3)};
 };
 
 _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_className,"price");
@@ -29,17 +29,17 @@ switch (playerSide) do {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
     };
-    case west: {
+    case independent: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
     };
-    case independent: {
+    case east: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
     };
-    case east: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
+    case west: {
+        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_NATO");
+        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_NATO");
     };
 };
 
@@ -109,7 +109,7 @@ _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 
 //Side Specific actions.
 switch (playerSide) do {
-    case west: {
+    case independent: {
         [_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
     };
     case civilian: {
@@ -117,7 +117,7 @@ switch (playerSide) do {
             [_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
         };
     };
-    case independent: {
+    case east: {
         [_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
     };
 };

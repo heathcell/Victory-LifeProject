@@ -9,7 +9,7 @@
 private ["_display","_list","_list2","_name","_crimes","_bounty","_units"];
 disableSerialization;
 
-if (playerSide != west) exitWith {}; // Only for cops open this menu
+if (playerSide != independent) exitWith {}; // Only for cops open this menu
 
 createDialog "life_wanted_menu";
 
@@ -22,7 +22,7 @@ _units = [];
 lbClear _players;
 
 {
-    _side = switch (side _x) do {case west: {"Cop"}; case civilian : {"Civ"}; default {"Unknown"};};
+    _side = switch (side _x) do {case independent: {"Cop"}; case civilian : {"Civ"}; default {"Unknown"};};
     _players lbAdd format ["%1 - %2", name _x,_side];
     _players lbSetdata [(lbSize _players)-1,str(_x)];
 } forEach playableUnits;

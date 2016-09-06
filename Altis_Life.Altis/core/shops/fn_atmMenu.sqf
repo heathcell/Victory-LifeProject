@@ -26,9 +26,9 @@ CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' imag
     _name = _x getVariable ["realname",name _x];
     if (alive _x && (!(_name isEqualTo profileName))) then {
         switch (side _x) do {
-            case west: {_type = "Cop"};
+            case independent: {_type = "Cop"};
             case civilian: {_type = "Civ"};
-            case independent: {_type = "EMS"};
+            case east: {_type = "EMS"};
         };
         _units lbAdd format ["%1 (%2)",_x getVariable ["realname",name _x],_type];
         _units lbSetData [(lbSize _units)-1,str(_x)];

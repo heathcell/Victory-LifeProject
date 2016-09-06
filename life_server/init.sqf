@@ -73,7 +73,7 @@ diag_log "---------------------------------- Starting Altis Life Server Init ---
 diag_log "------------------------------------------ Version 4.5 -------------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 
-if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then {
+if (LIFE_SETTINGS(getNumber,"save_position_restart") isEqualTo 1) then {
     [] spawn {
         _query = "UPDATE players SET civ_alive = '0' WHERE civ_alive = '1'";
         [_query,1] call DB_fnc_asyncCall;

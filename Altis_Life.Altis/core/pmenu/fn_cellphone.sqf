@@ -23,9 +23,9 @@ if (FETCH_CONST(life_adminlevel) < 1) then {
 {
     if (alive _x && _x != player) then {
         switch (side _x) do {
-            case west: {_type = "Cop"};
+            case independent: {_type = "Cop"};
             case civilian: {_type = "Civ"};
-            case independent: {_type = "Med"};
+            case east: {_type = "Med"};
         };
         _units lbAdd format ["%1 (%2)",_x getVariable ["realname",name _x],_type];
         _units lbSetData [(lbSize _units)-1,str(_x)];
