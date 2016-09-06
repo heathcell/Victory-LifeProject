@@ -26,6 +26,10 @@ if (count _itemArray isEqualTo 0) exitWith {
         case east: {
             [] call life_fnc_medicLoadout;
         };
+
+        case west: {
+            [] call life_fnc_natoLoadout;
+        };
     };
 };
 
