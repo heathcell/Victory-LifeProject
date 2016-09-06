@@ -205,6 +205,22 @@ life_attachment_point setVectorDirAndUp [[0,1,0], [0,0,1]];
 // Sharing the point of attachment with all players.
 publicVariable "life_attachment_point";
 
+//vAH
+all_ah_items = [];
+publicVariable "all_ah_items";
+[] spawn TON_fnc_vAH_init;
+[] spawn
+{
+	while {true} do
+	{
+	sleep (20 * 60);
+	if (count all_ah_items > 0) then
+		{
+			[] spawn TON_fnc_vAH_update;
+		};
+	};
+};
+
 west setFriend [independent, 1];
 west setFriend [east, 1];
 west setFriend [civilian, 1];
