@@ -61,6 +61,36 @@ private _index = -1;
                         };
                     };
                 };
+				
+				if((_x getVariable "Drank") > 0) then {
+					private "_colour";
+					switch ((_x getVariable "Drank")) do {
+						case 1: {_colour = "#CD7F32";};
+						case 2: {_colour = "#C0C0C0";};
+						case 3: {_colour = "#FFE766";};
+					};
+					if(_x getVariable ["DirectVON",false]) then {
+						if(side _x in [west,independent]) then {
+							_text = format ["<t color='%1'>         <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+						if(side _x == east) then {
+							_text = format ["<t color='%1'>          <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+						if(side _x == civilian) then {
+							_text = format ["<t color='%1'>     <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+					} else {
+						if(side _x in [west,independent]) then {
+							_text = format ["<t color='%1'>    <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+						if(side _x == east) then {
+							_text = format ["<t color='%1'>     <img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+						if(side _x == civilian) then {
+							_text = format ["<t color='%1'><img image='icons\vip.paa' size='1'></img></t><br/>",_colour] + _text;
+						};
+					};
+				};
 
                 _idc ctrlSetStructuredText parseText _text;
                 _idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
