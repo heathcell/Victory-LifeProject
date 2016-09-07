@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1549;
+		nextID=1551;
 	};
 	class MarkerIDProvider
 	{
-		nextID=224;
+		nextID=225;
 	};
 	class Camera
 	{
-		pos[]={14035.864,27.820011,18761.412};
-		dir[]={-0.58546185,-0.7751798,0.23737557};
-		up[]={-0.71838021,0.63173622,0.29126719};
-		aside[]={0.37574449,3.3839024e-007,0.92673182};
+		pos[]={3686.7996,24.866245,13144.428};
+		dir[]={0.64417028,-0.69791991,0.31302425};
+		up[]={0.62773454,0.71617514,0.30503744};
+		aside[]={0.43706992,-3.2014214e-008,-0.89944535};
 	};
 };
 binarizationWanted=0;
@@ -203,6 +203,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -217,24 +235,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -293,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=973;
+		items=975;
 		class Item0
 		{
 			dataType="Marker";
@@ -703,7 +703,7 @@ class Mission
 			position[]={14037.903,0.99855304,18750.951};
 			name="civ_car_3";
 			type="Empty";
-			angle=126.40599;
+			angle=126.40598;
 			id=43;
 			atlOffset=-24.623163;
 		};
@@ -2067,7 +2067,7 @@ class Mission
 			position[]={13791.351,19.653046,18759.205};
 			name="medic_spawn_2";
 			type="Empty";
-			angle=147.78883;
+			angle=147.78882;
 			id=179;
 		};
 		class Item177
@@ -2323,7 +2323,7 @@ class Mission
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=325.4754;
+			angle=325.47537;
 			id=205;
 		};
 		class Item203
@@ -33040,6 +33040,33 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item973
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3689.4939,22.848555,13146.29};
+				angles[]={0,1.6430879,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; this allowDamage false; this addAction [""Central Market"", {[] spawn life_fnc_vAH_load;},"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 '];";
+			};
+			id=1549;
+			type="Land_CashDesk_F";
+			atlOffset=11.724261;
+		};
+		class Item974
+		{
+			dataType="Marker";
+			position[]={3690.5291,-4.5933179e-028,13146.122};
+			name="marker_224";
+			text="Central Market";
+			type="mil_dot";
+			id=1550;
+			atlOffset=-10.404085;
 		};
 	};
 };
