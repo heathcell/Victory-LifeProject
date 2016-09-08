@@ -174,7 +174,7 @@ class AddonsMetaData
 randomSeed=2639488;
 class ScenarioData
 {
-	author="Tonic";
+	author="Eagle GE. Studio";
 	overViewPicture="textures\armalife.jpg";
 	overViewPictureLocked="textures\armalife.jpg";
 	loadScreen="textures\armalife.jpg";
@@ -269,7 +269,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Altis Life RPG v4.4r3";
+		briefingName="Altis Life RPG v4.5";
 		overviewText="@STR_MISC_overviewText";
 		startWeather=0.099999994;
 		startWind=0.29999998;
