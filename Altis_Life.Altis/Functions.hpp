@@ -164,6 +164,15 @@ class Life_Client_Core {
         class checkpass {};
         class login {};
     };
+	
+	class Economy {
+		file="core\economy";
+		class marketGrab {};
+		class openEconomy {};
+		class retrievePrices {};
+		class updateEconomy {};
+		class updatePrice {};
+	};
 
     class Functions {
         file = "core\functions";
