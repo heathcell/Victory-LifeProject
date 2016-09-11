@@ -419,9 +419,25 @@ class Clothing {
             { "U_I_G_Story_Protagonist_F", "", 7500, { "", "", -1 } },
             { "U_I_G_resistanceLeader_F", "", 11500, { "", "", -1 } },
             { "U_IG_leader", "Guerilla Leader", 15340, { "", "", -1 } },
-            { "U_O_PilotCoveralls", "", 15610, { "", "", -1 } },
+            { "U_O_FullGhillie_ard", "", 60000, { "", "", -1 } },
             { "U_O_SpecopsUniform_ocamo", "", 17500, { "", "", -1 } },
-            { "U_O_GhillieSuit", "", 50000, { "", "", -1 } }
+            { "U_O_GhillieSuit", "", 50000, { "", "", -1 } },
+            { "U_O_T_Soldier_F", "", 60000, { "", "", -1 } },
+            { "U_O_CombatUniform_ocamo", "", 60000, { "", "", -1 } },
+            { "U_O_T_FullGhillie_tna_F", "", 60000, { "", "", -1 } },
+            { "U_O_FullGhillie_lsh", "", 60000, { "", "", -1 } },
+            { "U_O_FullGhillie_sard", "", 60000, { "", "", -1 } },
+            { "U_O_T_Sniper_F", "", 60000, { "", "", -1 } },
+            { "U_O_T_Officer_F", "", 30000, { "", "", -1 } },
+            { "U_BG_leader", "", 15000, { "", "", -1 } },
+            { "U_I_C_Soldier_Para_2_F", "", 14000, { "", "", -1 } },
+            { "U_I_C_Soldier_Para_3_F", "", 14000, { "", "", -1 } },
+            { "U_I_C_Soldier_Para_4_F", "", 14000, { "", "", -1 } },
+            { "U_I_C_Soldier_Para_1_F", "", 14000, { "", "", -1 } },
+            { "TRYK_B_TRYK_3C_T", "", 12000, { "", "", -1 } },
+            { "TRYK_U_B_ACU", "", 12000, { "", "", -1 } },
+            { "TRYK_U_B_ACUTshirt", "", 12000, { "", "", -1 } },
+            { "TRYK_U_B_BLTAN_T", "", 12000, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
