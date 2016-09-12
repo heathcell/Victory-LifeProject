@@ -1,27 +1,51 @@
+#include "..\..\script_macros.hpp"
 /*
-    Copyright Â© 2013 Bryan "Tonic" Boardwine, All rights reserved
-    See http://armafiles.info/life/list.txt for servers that are permitted to use this code.
-    File: fn_wantedList.sqf
-    Author: Bryan "Tonic" Boardwine"
-
+    File: fn_wantedMenu.sqf
+    Author: Bryan "Tonic" Boardwine
     Description:
-    Displays wanted list information sent from the server.
+    Opens the Wanted menu and connects to the APD.
 */
-private ["_info","_display","_list",/*"_units",*/"_entry"];
 disableSerialization;
-_info = [_this,0,[],[[]]] call BIS_fnc_param;
-_display = findDisplay 2400;
-_list = _display displayCtrl 2401;
+
+if !(playerSide isEqualTo west) exitWith {}; // Only for cops open this menu
+
+createDialog "life_wanted_menu";
+
+private _display = findDisplay 2400;
+private _list = _display displayCtrl 2401;
+private _players = _display displayCtrl 2406;
+private _units = [];
+
+lbClear _list;
+lbClear _players;
 
 {
-    _entry = _x;
-    _list lbAdd format ["%1", _entry select 1];
-    _list lbSetData [(lbSize _list)-1,str(_entry)];
-} forEach _info;
+    private _side = switch (side _x) do {case west: {"Cop"}; case civilian : {"Civ"}; default {"Unknown"};};
+    _players lbAdd format ["%1 - %2", name _x,_side];
+    _players lbSetdata [(lbSize _players)-1,str(_x)];
+} forEach playableUnits;
 
-ctrlSetText[2404,"Connection Established"];
+private _list2 = CONTROL(2400,2407);
+lbClear _list2; //Purge the list
 
-if (((lbSize _list)-1) isEqualTo -1) then
+private _crimes = LIFE_SETTINGS(getArray,"crimes");
 {
-    _list lbAdd "No criminals";
+  if (isLocalized (_x select 0)) then {
+    _list2 lbAdd format ["%1 - $%2 (%3)",localize (_x select 0),(_x select 1),(_x select 2)];
+  } else {
+    _list2 lbAdd format ["%1 - $%2 (%3)",(_x select 0),(_x select 1),(_x select 2)];
+  };
+    _list2 lbSetData [(lbSize _list2)-1,(_x select 2)];
+} forEach _crimes;
+
+ctrlSetText[2404,"Establishing connection..."];
+
+if (FETCH_CONST(life_coplevel) < 3 && {FETCH_CONST(life_adminlevel) isEqualTo 0}) then {
+    ctrlShow[2405,false];
+};
+
+if (life_HC_isActive) then {
+    [player] remoteExec ["HC_fnc_wantedFetch",HC_Life];
+} else {
+    [player] remoteExec ["life_fnc_wantedFetch",RSERV];
 };

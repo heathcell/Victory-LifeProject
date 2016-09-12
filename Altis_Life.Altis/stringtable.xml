@@ -1935,6 +1935,17 @@
         </Key>
     </Package>
     <Package name="Garage_Strings">
+		<Key ID="STR_House_Hideout">
+            <Original>This building is a Gang Hideout!</Original>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German></German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+        </Key>
         <Key ID="STR_Garage_AlreadyOwned">
             <Original>This garage has already been bought!</Original>
             <Czech></Czech>
