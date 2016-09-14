@@ -203,6 +203,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -217,24 +235,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -2323,7 +2323,7 @@ class Mission
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=325.47534;
+			angle=325.47531;
 			id=205;
 		};
 		class Item203
@@ -24277,8 +24277,8 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
-				name="Station_shop_1";
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""];";
+				name="Station_shop_01";
 			};
 			id=745;
 			type="Land_CashDesk_F";
@@ -24320,8 +24320,8 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
-				name="Station_shop_2";
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""];";
+				name="Station_shop_02";
 			};
 			id=746;
 			type="Land_CashDesk_F";
@@ -24364,7 +24364,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
-				name="Station_shop_3";
+				name="Station_shop_03";
 			};
 			id=747;
 			type="Land_CashDesk_F";
@@ -24749,7 +24749,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""];";
 				name="Station_shop_13";
 			};
 			id=756;
@@ -24792,7 +24792,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""];";
 				name="Station_shop_14";
 			};
 			id=757;
@@ -24835,6 +24835,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
 				name="Station_shop_15";
 			};
 			id=758;
@@ -25049,6 +25050,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store""];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee""]; this addAction[""Rob Cash Register"",life_fnc_robShops];";
 				name="Station_shop_20";
 			};
 			id=763;
@@ -33267,7 +33269,7 @@ class Mission
 			fillName="Horizontal";
 			a=400;
 			b=700;
-			angle=44.443996;
+			angle=44.443993;
 			id=1564;
 		};
 		class Item989
