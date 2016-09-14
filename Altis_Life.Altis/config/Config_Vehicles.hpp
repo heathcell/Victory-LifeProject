@@ -84,6 +84,11 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "C_Offroad_01_F", { "", "", -1 } },
+            { "shounka_nemo_pompier", { "", "", -1 } },
+            { "cl3_transitemt", { "", "", -1 } },
+            { "Jonzie_Ambulance", { "", "", -1 } },
+            { "shounka_a3_pompier_sprinter", { "", "", -1 } },
+            { "cl_skatea", { "", "", -1 } },
             { "I_Truck_02_medical_F", { "", "", -1 } },
             { "O_Truck_03_medical_F", { "", "", -1 } },
             { "B_Truck_01_medical_F", { "", "", -1 } }
@@ -94,7 +99,9 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "B_Heli_Light_01_F", { "", "", -1 } },
-            { "O_Heli_Light_02_unarmed_F", { "", "", -1 } }
+            { "O_Heli_Light_02_unarmed_F", { "", "", -1 } },
+            { "dezkit_b206_rescue", { "", "", -1 } },
+            { "dezkit_b206_ems", { "", "", -1 } }
         };
     };
 
@@ -658,7 +665,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-        class C_Van_01_fuel_F {
+	class C_Van_01_fuel_F {
         vItemSpace = 20;
         vFuelSpace = 19500;
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
@@ -693,6 +700,55 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vFuelSpace = 50000;
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
         price = 250000;
+        textures[] = {};
+    };
+
+    class shounka_nemo_pompier {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class cl3_transitemt {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class Jonzie_Ambulance {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class shounka_a3_pompier_sprinter {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class cl_skatea {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class dezkit_b206_rescue {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 500000;
+        textures[] = {};
+    };
+
+    class dezkit_b206_ems {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 500000;
         textures[] = {};
     };
 };
