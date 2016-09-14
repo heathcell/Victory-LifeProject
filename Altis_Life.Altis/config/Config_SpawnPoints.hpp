@@ -68,24 +68,24 @@ class CfgSpawnPoints {
                 displayName = "Northern Rebel Base";
                 spawnMarker = "Rebelop";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                licenses[] = { { "rebel", true } };
-                level[] = { "", "", -1 };
+                licenses[] = { { "", true } };
+                level[] = { "life_donorlevel", "SCALAR", 3 };
             };
 
             class RebelS {
                 displayName = "Southern Rebel Base";
                 spawnMarker = "Rebelop_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                licenses[] = { { "rebel", true } };
-                level[] = { "", "", -1 };
+                licenses[] = { { "", true } };
+                level[] = { "life_donorlevel", "SCALAR", 3 };
             };
 
             class RebelE {
                 displayName = "Eastern Rebel Base";
                 spawnMarker = "Rebelop_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                licenses[] = { { "rebel", true } };
-                level[] = { "", "", -1 };
+                licenses[] = { { "", true } };
+                level[] = { "life_donorlevel", "SCALAR", 3 };
             };
         };
 
