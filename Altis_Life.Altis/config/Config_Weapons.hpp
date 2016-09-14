@@ -98,7 +98,7 @@ class WeaponShops {
             { "ItemCompass", "", 50, 25, { "", "", -1 } },
             { "ItemWatch", "", 50, -1, { "", "", -1 } },
             { "FirstAidKit", "", 150, 65, { "", "", -1 } },
-            { "NVGoggles", "", 2000, 980, { "", "", -1 } },
+            { "NVGoggles", "", 10000, 980, { "", "", -1 } },
             { "Chemlight_red", "", 300, -1, { "", "", -1 } },
             { "Chemlight_yellow", "", 300, 50, { "", "", -1 } },
             { "Chemlight_green", "", 300, 50, { "", "", -1 } },
@@ -140,7 +140,7 @@ class WeaponShops {
             { "Binocular", "", 150, -1, { "", "", -1 } },
             { "ItemGPS", "", 100, 45, { "", "", -1 } },
             { "FirstAidKit", "", 150, 65, { "", "", -1 } },
-            { "NVGoggles", "", 2000, 980, { "", "", -1 } },
+            { "NVGoggles", "", 10000, 980, { "", "", -1 } },
             { "HandGrenade_Stone", "Flashbang", 1700, -1, { "", "", -1 } },
             { "hgun_P07_snds_F", "Stun Pistol", 2000, 650, { "", "", -1 } },
             { "arifle_sdar_F", "Taser Rifle", 20000, 7500, { "", "", -1 } },
@@ -177,7 +177,10 @@ class WeaponShops {
             { "ItemGPS", "", 100, 45, { "", "", -1 } },
             { "Binocular", "", 150, -1, { "", "", -1 } },
             { "FirstAidKit", "", 150, 65, { "", "", -1 } },
-            { "NVGoggles", "", 1200, 980, { "", "", -1 } }
+            { "NVGoggles_OPFOR", "", 10000, 980, { "", "", -1 } },
+            { "NVGoggles_tna_F", "", 10000, 980, { "", "", -1 } },
+            { "NVGogglesB_blk_F", "", 200000, 980, { "", "", -1 } },
+            { "NVGogglesB_grn_F", "", 200000, 980, { "", "", -1 } }
         };
         mags[] = {};
         accs[] = {};
