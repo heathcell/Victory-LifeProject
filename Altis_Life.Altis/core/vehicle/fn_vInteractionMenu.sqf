@@ -40,6 +40,11 @@ _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck; close
 
 if ((life_inv_toolkit >= 1) && {alive life_vInact_curTarget} && {([life_vInact_curTarget] call life_fnc_isDamaged)}) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
+if (playerSide != civilian) then {
+	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
+    _Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction; closeDialog 0;";
+};
+
 if (playerSide isEqualTo independent) then {
     _Btn2 ctrlSetText localize "STR_vInAct_Registration";
     _Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction; closeDialog 0;";
@@ -50,9 +55,6 @@ if (playerSide isEqualTo independent) then {
     _Btn4 ctrlSetText localize "STR_vInAct_PullOut";
     _Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction; closeDialog 0;";
     if (crew _curTarget isEqualTo []) then {_Btn4 ctrlEnable false;};
-
-    _Btn5 ctrlSetText localize "STR_vInAct_Impound";
-    _Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction; closeDialog 0;";
 
     if (_curTarget isKindOf "Ship") then {
         _Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
