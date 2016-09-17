@@ -1760,4 +1760,292 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_aventador_lp7004_2tone2 : cl3_aventador_lp7004_black{};
     class cl3_aventador_lp7004_2tone3 : cl3_aventador_lp7004_black{};
 
+	
+	class ivory_f1 {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 14400000
+        textures[] = {};
+    };
+
+	
+	class ivory_mp4 {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 15000000
+        textures[] = {};
+    };
+
+	
+	class ivory_lfa {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 13400000
+        textures[] = {};
+    };
+
+	
+	class Mrshounka_agera_p {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 13000000
+        textures[] = {};
+    };
+
+	
+	class ivory_veyron {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 11000000
+        textures[] = {};
+    };
+
+	
+	class Mrshounka_lykan_c {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 14000000
+        textures[] = {};
+    };
+    class Mrshounka_lykan_c_yel : Mrshounka_lykan_c{};
+    class Mrshounka_lykan_c_bleufonce : Mrshounka_lykan_c{};
+    class Mrshounka_lykan_c_white : Mrshounka_lykan_c{};
+    class Mrshounka_lykan_c_violet : Mrshounka_lykan_c{};
+    class Mrshounka_lykan_c_orange : Mrshounka_lykan_c{};
+
+	
+	class Mrshounka_veneno_c {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 14000000
+        textures[] = {};
+    };
+    class Mrshounka_veneno_c_noir : Mrshounka_veneno_c{};
+    class Mrshounka_veneno_c_bleu : Mrshounka_veneno_c{};
+    class Mrshounka_veneno_c_jaune : Mrshounka_veneno_c{};
+
+	
+	class mrshounka_huracan_c_bleufonce {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 10000000
+        textures[] = {};
+    };
+    class mrshounka_huracan_c_violet : mrshounka_huracan_c_bleufonce{};
+    class mrshounka_huracan_c_orange : mrshounka_huracan_c_bleufonce{};
+
+	
+	class shounka_mp4_bleufonce {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 10000000
+        textures[] = {};
+    };
+    class shounka_mp4_violet : shounka_mp4_bleufonce{};
+    class shounka_mp4_orange : shounka_mp4_bleufonce{};
+
+	
+	class shounka_limo_civ {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 10000000
+        textures[] = {};
+    };
+    class shounka_limo_civ_bleufonce : shounka_limo_civ{};
+    class shounka_limo_civ_violet : shounka_limo_civ{};
+    class shounka_limo_civ_orange : shounka_limo_civ{};
+
+
+	class cl3_dbs_volante_black {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 8400000
+        textures[] = {};
+    };
+    class cl3_dbs_volante_blue : cl3_dbs_volante_black{};
+    class cl3_dbs_volante_red : cl3_dbs_volante_black{};
+    class cl3_dbs_volante_flame : cl3_dbs_volante_black{};
+    class cl3_dbs_volante_flame1 : cl3_dbs_volante_black{};
+    class cl3_dbs_volante_flame2 : cl3_dbs_volante_black{};
+
+
+	class shounka_clk_bleufonce {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 7600000
+        textures[] = {};
+    };
+    class shounka_clk_violet : shounka_clk_bleufonce{};
+    class shounka_clk_orange : shounka_clk_bleufonce{};
+
+
+	class cl3_veyron_F {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 9000000
+        textures[] = {};
+    };
+    class cl3_veyron_lblue_dblue : cl3_veyron_F{};
+    class cl3_veyron_black : cl3_veyron_F{};
+    class cl3_veyron_red_red : cl3_veyron_F{};
+
+
+	class ivory_c {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 4400000
+        textures[] = {};
+    };
+
+
+	class ivory_elise {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 8000000
+        textures[] = {};
+    };
+
+
+	class Mrshounka_bmwm6_civ {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 7000000
+        textures[] = {};
+    };
+    class Mrshounka_bmwm6_bleufonce : Mrshounka_bmwm6_civ{};
+    class Mrshounka_bmwm6_violet : Mrshounka_bmwm6_civ{};
+    class Mrshounka_bmwm6_orange : Mrshounka_bmwm6_civ{};
+
+
+	class Mrshounka_jeep_blinde_bleu {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 5200000
+        textures[] = {};
+    };
+    class Mrshounka_jeep_blinde_bleu_mat : Mrshounka_jeep_blinde_bleu{};
+    class Mrshounka_jeep_blinde_violet : Mrshounka_jeep_blinde_bleu{};
+    class Mrshounka_jeep_blinde_violet_mat : Mrshounka_jeep_blinde_bleu{};
+    class Mrshounka_jeep_blinde_rouge : Mrshounka_jeep_blinde_bleu{};
+    class Mrshounka_jeep_blinde_rouge_mat : Mrshounka_jeep_blinde_bleu{};
+
+
+	class shounka_h2 {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 7600000
+        textures[] = {};
+    };
+    class shounka_h2_bleufonce : shounka_h2{};
+    class shounka_h2_violet : shounka_h2{};
+    class shounka_h2_orange : shounka_h2{};
+
+
+	class Mrshounka_hummer_civ {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 6000000
+        textures[] = {};
+    };
+    class Mrshounka_hummer_civ_bleufonce : Mrshounka_hummer_civ{};
+    class Mrshounka_hummer_civ_violet : Mrshounka_hummer_civ{};
+    class Mrshounka_hummer_civ_orange : Mrshounka_hummer_civ{};
+
+
+	class cl3_z4_2008_black {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 9000000
+        textures[] = {};
+    };
+    class cl3_z4_2008_blue : cl3_z4_2008_black{};
+    class cl3_z4_2008_orange : cl3_z4_2008_black{};
+    class cl3_z4_2008_purple : cl3_z4_2008_black{};
+    class cl3_z4_2008_white : cl3_z4_2008_black{};
+
+
+	class shounka_f430_spider {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 8000000
+        textures[] = {};
+    };
+    class shounka_f430_spider_bleufonce : shounka_f430_spider{};
+    class shounka_f430_spider_jaune : shounka_f430_spider{};
+    class shounka_f430_spider_violet : shounka_f430_spider{};
+    class shounka_f430_spider_orange : shounka_f430_spider{};
+
+
+	class Jonzie_Viper {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 7000000
+        textures[] = {};
+    };
+
+
+	class shounka_porsche911 {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 5800000
+        textures[] = {};
+    };
+    class shounka_porsche911_bleufonce : shounka_porsche911{};
+    class shounka_porsche911_violet : shounka_porsche911{};
+    class shounka_porsche911_orange : shounka_porsche911{};
+
+
+	class mrshounka_92_civ {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 5800000
+        textures[] = {};
+    };
+    class mrshounka_92_civ_bleufonce : mrshounka_92_civ{};
+    class mrshounka_92_civ_violet : mrshounka_92_civ{};
+    class mrshounka_92_civ_orange : mrshounka_92_civ{};
+
+
+	class ivory_isf {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 5000000
+        textures[] = {};
+    };
+
+
+	class Mrshounka_a3_gtr_civ {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 3800000
+        textures[] = {};
+    };
+    class Mrshounka_a3_gtr_civ_bleu : Mrshounka_a3_gtr_civ{};
+    class Mrshounka_cayenne_p_civ : Mrshounka_a3_gtr_civ{};
+    class Mrshounka_c63_2015_bleufonce : Mrshounka_a3_gtr_civ{};
+    class Mrshounka_c63_2015_violet : Mrshounka_a3_gtr_civ{};
+    class Mrshounka_c63_2015_orange : Mrshounka_a3_gtr_civ{};
+
+
+	class cl3_arielatom_race_black {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 2400000
+        textures[] = {};
+    };
+    class cl3_arielatom_race_blue : cl3_arielatom_race_black{};
+    class cl3_arielatom_race_red : cl3_arielatom_race_black{};
+    class cl3_arielatom_race_green : cl3_arielatom_race_black{};
+
+
+	class Mrshounka_a3_308_rcz {
+        vItemSpace = 75;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 2000000
+        textures[] = {};
+    };
+    class Mrshounka_a3_308_rcz_bleufonce : Mrshounka_a3_308_rcz{};
+    class Mrshounka_a3_308_rcz_violet : Mrshounka_a3_308_rcz{};
+    class Mrshounka_a3_308_rcz_orange : Mrshounka_a3_308_rcz{};
+
 };
