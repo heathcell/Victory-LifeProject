@@ -22,7 +22,7 @@ _curTarget = param [0,objNull,[objNull]];
 if (isNull _curTarget) exitWith {}; //Bad target
 _houseCfg = [(typeOf _curTarget)] call life_fnc_houseConfig;
 if (count _houseCfg isEqualTo 0 && playerSide isEqualTo civilian) exitWith {};
-if ({player distance getMarkerPos "fed_reserve" < 1000) exitWith {};
+if (playerSide isEqualTo civilian && (player distance getMarkerPos "fed_reserve" < 1000)) exitWith {};
 
 if (!dialog) then {
     createDialog "pInteraction_Menu";
