@@ -20,4 +20,19 @@ StartProgress = false;
 };
 [] spawn life_fnc_showDirectVON;
 
+_location=[14033,18759.3]; _radius=15;
+_terrainobjects=nearestTerrainObjects [_location,[],_radius]; {hideObjectGlobal _x} foreach _terrainobjects;
+
+_location=[14033.1,18790.3]; _radius=15; 
+_terrainobjects=nearestTerrainObjects [_location,[],_radius]; {hideObjectGlobal _x} foreach _terrainobjects;
+
+_location=[14062.5,18737.7]; _radius=5; 
+_terrainobjects=nearestTerrainObjects [_location,[],_radius]; {hideObjectGlobal _x} foreach _terrainobjects;
+
+_location=[14003.4,18736.5]; _radius=18; 
+_terrainobjects=nearestTerrainObjects [_location,[],_radius]; {hideObjectGlobal _x} foreach _terrainobjects;
+
+_location=[14034.5,18711.4]; _radius=10; 
+_terrainobjects=nearestTerrainObjects [_location,[],_radius]; {hideObjectGlobal _x} foreach _terrainobjects;
+
 StartProgress = true;
