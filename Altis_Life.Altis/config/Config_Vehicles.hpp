@@ -34,7 +34,7 @@ class CarShops {
             { "Jonzie_Datsun_510", { "", "", -1 } },
             { "Jonzie_Datsun_Z432", { "", "", -1 } },
             { "Mrshounka_corbillard_c", { "", "", -1 } },
-            { "Jonzie_30CSLJonzie_30CSL", { "", "", -1 } },
+            { "Jonzie_30CSL", { "", "", -1 } },
             { "Mrshounka_golfvi_civ", { "", "", -1 } },
             { "cl3_civic_vti_black", { "", "", -1 } },
             { "cl3_civic_vti_red", { "", "", -1 } },
@@ -175,7 +175,7 @@ class CarShops {
         };
     };
 	
-    class civ_carSuper {
+    class civ_supercar {
         side = "civ";
         vehicles[] = {
             { "cl3_chopper_gold", { "", "", -1 } },
@@ -409,6 +409,11 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "C_Offroad_01_F", { "", "", -1 } },
+            { "shounka_nemo_pompier", { "", "", -1 } },
+            { "cl3_transitemt", { "", "", -1 } },
+            { "Jonzie_Ambulance", { "", "", -1 } },
+            { "shounka_a3_pompier_sprinter", { "", "", -1 } },
+            { "cl_skatea", { "", "", -1 } },
             { "I_Truck_02_medical_F", { "", "", -1 } },
             { "O_Truck_03_medical_F", { "", "", -1 } },
             { "B_Truck_01_medical_F", { "", "", -1 } }
@@ -419,7 +424,9 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "B_Heli_Light_01_F", { "", "", -1 } },
-            { "O_Heli_Light_02_unarmed_F", { "", "", -1 } }
+            { "O_Heli_Light_02_unarmed_F", { "", "", -1 } },
+            { "dezkit_b206_rescue", { "", "", -1 } },
+            { "dezkit_b206_ems", { "", "", -1 } }
         };
     };
 
@@ -983,7 +990,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-        class C_Van_01_fuel_F {
+	class C_Van_01_fuel_F {
         vItemSpace = 20;
         vFuelSpace = 19500;
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
@@ -1018,6 +1025,55 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vFuelSpace = 50000;
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
         price = 250000;
+        textures[] = {};
+    };
+
+    class shounka_nemo_pompier {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class cl3_transitemt {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class Jonzie_Ambulance {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class shounka_a3_pompier_sprinter {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class cl_skatea {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 250000;
+        textures[] = {};
+    };
+
+    class dezkit_b206_rescue {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 500000;
+        textures[] = {};
+    };
+
+    class dezkit_b206_ems {
+        vItemSpace = 50;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 500000;
         textures[] = {};
     };
 	
@@ -1055,7 +1111,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price = 24000;
         textures[] = {};
     };
-    class Jonzie_Datsun_510 : Jonzie_Datsun_510{}; 
 	
 	class Jonzie_Datsun_Z432 {
         vItemSpace = 50;
@@ -1064,7 +1119,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 	
-	
 	class Mrshounka_corbillard_c {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1072,14 +1126,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     }; 
 	
-	
-	class Jonzie_30CSLJonzie_30CSL {
+	class Jonzie_30CSL {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 40000;
         textures[] = {};
     };
-	
 	
 	class Mrshounka_golfvi_civ {
         vItemSpace = 75;
@@ -1111,7 +1163,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price = 58000;
         textures[] = {};
     };
-    class Jonzie_Corolla : Jonzie_Corolla{};  
 	
 	class ivory_evox {
         vItemSpace = 75;
@@ -1137,14 +1188,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     }; 
 	
-	
 	class ivory_supra_topsecret {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 400000;
         textures[] = {};
     }; 
-	
 	
 	class ivory_190e {
         vItemSpace = 75;
@@ -1153,14 +1202,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 	
-	
 	class Jonzie_Mini_Cooper {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 140000;
         textures[] = {};
     };
-	
 	
 	class Jonzie_Mini_Cooper_R_spec {
         vItemSpace = 75;
@@ -1169,14 +1216,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 	
-	
 	class ivory_r34 {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 240000;
         textures[] = {};
     };
-	
 	
 	class Mrshounka_mercedes_190_p_civ {
         vItemSpace = 50;
@@ -1187,7 +1232,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_mercedes_190_p_violet : Mrshounka_mercedes_190_p_civ{};
     class Mrshounka_mercedes_190_p_orange : Mrshounka_mercedes_190_p_civ{};
 	
-	
 	class Mrshounka_megane_rs_2015_civ {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1196,7 +1240,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
     class Mrshounka_megane_rs_2015_violet : Mrshounka_megane_rs_2015_civ{};
     class Mrshounka_megane_rs_2015_orange : Mrshounka_megane_rs_2015_civ{};
-	
 	
 	class cl3_q7_black {
         vItemSpace = 50;
@@ -1210,7 +1253,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class vip_q7_orange : cl3_q7_black{};
     class vip_q7_silver : cl3_q7_black{};
 	
-	
 	class shounka_transam {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1220,7 +1262,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class shounka_transam_bleufonce : shounka_transam{};
     class shounka_transam_violet : shounka_transam{};
     class shounka_transam_orange : shounka_transam{};
-  
 	
 	class cl3_e63_amg_black {
         vItemSpace = 50;
@@ -1231,7 +1272,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_e63_amg_blue : cl3_e63_amg_black{};
     class cl3_e63_amg_white : cl3_e63_amg_black{};
     class cl3_e63_amg_violet : cl3_e63_amg_black{};
-  
 	
 	class cl3_range_rover_black {
         vItemSpace = 50;
@@ -1242,7 +1282,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_range_rover_blue : cl3_range_rover_black{};
     class cl3_range_rover_white : cl3_range_rover_black{};
     class cl3_range_rover_violet : cl3_range_rover_black{};
-  
 	
 	class Mrshounka_Volkswagen_Touareg_civ {
         vItemSpace = 50;
@@ -1254,7 +1293,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_Volkswagen_Touareg_violet : Mrshounka_Volkswagen_Touareg_civ{};
     class Mrshounka_Volkswagen_Touareg_orange : Mrshounka_Volkswagen_Touareg_civ{};
   
-	
 	class Mrshounka_subaru08_civ {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1265,7 +1303,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_subaru08_violet : Mrshounka_subaru08_civ{};
     class Mrshounka_subaru08_orange : Mrshounka_subaru08_civ{};
   
-	
 	class Mrshounka_r5_noir {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1273,7 +1310,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
   
-	
 	class cl3_s5_yellow {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1285,7 +1321,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_s5_white : cl3_s5_yellow{};
     class cl3_s5_violet : cl3_s5_yellow{};
   
-	
 	class ivory_gt500 {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1293,14 +1328,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
   
-	
 	class cl3_golf_learner_white {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 300000;
         textures[] = {};
     };
-  
 	
 	class A3L_JeepWhiteBlack {
         vItemSpace = 50;
@@ -1312,7 +1345,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class A3L_JeepRedTan : A3L_JeepWhiteBlack{};
     class A3L_JeepRedBlack : A3L_JeepWhiteBlack{};
   
-	
 	class C_Offroad_02_unarmed_F {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1320,15 +1352,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
   
-	
 	class I_C_Offroad_02_unarmed_F {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
         price = 220000;
         textures[] = {};
     };
-
-  
 	
 	class Mrshounka_evox_violet {
         vItemSpace = 50;
@@ -1337,7 +1366,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
   
-	
 	class Mrshounka_lincoln_bleufonce {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1348,7 +1376,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_lincoln_violet : Mrshounka_lincoln_bleufonce{};
     class Mrshounka_lincoln_orange : Mrshounka_lincoln_bleufonce{};
   
-	
 	class Jonzie_Quattroporte {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1356,7 +1383,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
   
-	
 	class Mrshounka_cherokee_noir_bleu {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1367,7 +1393,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_cherokee_noir_violet : Mrshounka_cherokee_noir_bleu{};
     class Mrshounka_cherokee_noir_violet_mat : Mrshounka_cherokee_noir_bleu{};
   
-	
 	class shounka_a3_cliors_civ {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
@@ -1378,251 +1403,224 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class shounka_a3_cliors_civ_violet : shounka_a3_cliors_civ{};
     class shounka_a3_cliors_civ_orange : shounka_a3_cliors_civ{};
   
-	
 	class cl3_volha_grey {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 100000
+        price = 100000;
         textures[] = {};
     };
     class cl3_volha_black : cl3_volha_grey{};
   
-	
 	class Mrshounka_Vandura_civ {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 130000
+        price = 130000;
         textures[] = {};
     };
     class Mrshounka_Vandura_civ_bleufonce : Mrshounka_Vandura_civ{};
     class Mrshounka_Vandura_civ_violet : Mrshounka_Vandura_civ{};
     class Mrshounka_Vandura_civ_orange : Mrshounka_Vandura_civ{};
   
-	
 	class Jonzie_VE {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 136000
+        price = 136000;
         textures[] = {};
     };
   
-	
 	class Jonzie_Ute {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 180000
+        price = 180000;
         textures[] = {};
     };
   
-	
 	class shounka_a3_ds4_bleufonce {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 140000
+        price = 140000;
         textures[] = {};
     };
     class shounka_a3_ds4_violet : shounka_a3_ds4_bleufonce{};
     class shounka_a3_ds4_orange : shounka_a3_ds4_bleufonce{};
   
-	
 	class Jonzie_XB {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 500000
+        price = 500000;
         textures[] = {};
     };
   
-	
 	class shounka_gt {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 700000
+        price = 700000;
         textures[] = {};
     };
     class shounka_gt_bleufonce : shounka_gt{};
     class shounka_gt_violet : shounka_gt{};
     class shounka_gt_orange : shounka_gt{};
   
-	
 	class Mrshounka_mustang_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 700000
+        price = 700000;
         textures[] = {};
     };
   
-	
 	class Mrshounka_Bowler_c {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 180000
+        price = 180000;
         textures[] = {};
     };
     class Mrshounka_Bowler_c_bleufonce : Mrshounka_Bowler_c{};
     class Mrshounka_Bowler_c_violet : Mrshounka_Bowler_c{};
     class Mrshounka_Bowler_c_orange : Mrshounka_Bowler_c{};
-  
 	
 	class ivory_e36 {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 180000
-        textures[] = {};
-    };
-  
-	
-	class Jonzie_Escalade {
-        vItemSpace = 50;
-        licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 200000
+        price = 180000;
         textures[] = {};
     };
 
+	class Jonzie_Escalade {
+        vItemSpace = 50;
+        licenses[] = { {"driver"}, {""}, {""}, {""} };
+        price = 200000;
+        textures[] = {};
+    };
 	
 	class ivory_m3 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 800000
+        price = 800000;
         textures[] = {};
     };
-    class ivory_m3 : ivory_m3{};
 
-	
 	class cl3_challenger_2009_F {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 600000
+        price = 600000;
         textures[] = {};
     };
 
-	
 	class Mrshounka_Alfa_Romeo_bleufonce {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 300000
+        price = 300000;
         textures[] = {};
     };
     class Mrshounka_Alfa_Romeo_violet : Mrshounka_Alfa_Romeo_bleufonce{};
     class Mrshounka_Alfa_Romeo_orange : Mrshounka_Alfa_Romeo_bleufonce{};
-
 	
 	class Mrshounka_rs4_civ_bleufonce {
         vItemSpace = 50;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 140000
+        price = 140000;
         textures[] = {};
     };
     class Mrshounka_rs4_civ_violet : Mrshounka_rs4_civ_bleufonce{};
     class Mrshounka_rs4_civ_orange : Mrshounka_rs4_civ_bleufonce{};
-
 	
 	class ivory_rs4 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 220000
+        price = 220000;
         textures[] = {};
     };
-
 	
 	class shounka_rs6 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 260000
+        price = 260000;
         textures[] = {};
     };
     class shounka_rs6_bleufonce : shounka_rs6{};
     class shounka_rs6_violet : shounka_rs6{};
     class shounka_rs6_orange : shounka_rs6{};
 
-	
 	class Mrshounka_bmwm1_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 320000
+        price = 320000;
         textures[] = {};
     };
     class Mrshounka_bmwm1_civ_bleufonce : Mrshounka_bmwm1_civ{};
     class Mrshounka_bmwm1_civ_violet : Mrshounka_bmwm1_civ{};
     class Mrshounka_bmwm1_civ_orange : Mrshounka_bmwm1_civ{};
-
 	
 	class Jonzie_Raptor {
         vItemSpace = 130;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 360000
+        price = 360000;
         textures[] = {};
     };
-
 	
 	class shounka_avalanche {
         vItemSpace = 100;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 200000
+        price = 200000;
         textures[] = {};
     };
     class shounka_avalanche_bleufonce : shounka_avalanche{};
     class shounka_avalanche_violet : shounka_avalanche{};
     class shounka_avalanche_orange : shounka_avalanche{};
-
 	
 	class Mrshounka_a3_dodge15_civ_bleufonce {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 3200000
+        price = 3200000;
         textures[] = {};
     };
     class Mrshounka_a3_dodge15_civ_violet : Mrshounka_a3_dodge15_civ_bleufonce{};
     class Mrshounka_a3_dodge15_civ_orange : Mrshounka_a3_dodge15_civ_bleufonce{};
-
 	
 	class shounka_monsteur_bleufonce {
         vItemSpace = 150;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 400000
+        price = 400000;
         textures[] = {};
     };
     class shounka_monsteur_violet : shounka_monsteur_bleufonce{};
     class shounka_monsteur_orange : shounka_monsteur_bleufonce{};
-
 	
 	class Mrshounka_raptor2_civ {
         vItemSpace = 180;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 700000
+        price = 700000;
         textures[] = {};
     };
     class Mrshounka_raptor2_bleufonce : Mrshounka_raptor2_civ{};
     class Mrshounka_raptor2_violet : Mrshounka_raptor2_civ{};
     class Mrshounka_raptor2_orange : Mrshounka_raptor2_civ{};
-
 	
 	class Mrshounka_raptor_civ {
         vItemSpace = 250;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 1000000
+        price = 1000000;
         textures[] = {};
     };
     class Mrshounka_raptor_bleufonce : Mrshounka_raptor_civ{};
     class Mrshounka_raptor_violet : Mrshounka_raptor_civ{};
     class Mrshounka_raptor_orange : Mrshounka_raptor_civ{};
-
 	
 	class cl3_chopper_gold {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 1500000
+        price = 1500000;
         textures[] = {};
     };
     class cl3_chopper_blue : cl3_chopper_gold{};
     class cl3_chopper_green : cl3_chopper_gold{};
     class cl3_chopper_red : cl3_chopper_gold{};
     class cl3_chopper_silver : cl3_chopper_gold{};;
-
 	
 	class cl3_lamborghini_gt1_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 16400000
+        price = 16400000;
         textures[] = {};
     };
     class cl3_lamborghini_gt1_blue : cl3_lamborghini_gt1_black{};
@@ -1634,12 +1632,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_lamborghini_gt1_2tone1 : cl3_lamborghini_gt1_black{};
     class cl3_lamborghini_gt1_2tone2 : cl3_lamborghini_gt1_black{};
     class cl3_lamborghini_gt1_2tone3 : cl3_lamborghini_gt1_black{};
-
 	
 	class Mrshounka_ducati_p_yel {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 1700000
+        price = 1700000;
         textures[] = {};
     };
     class Mrshounka_ducati_p_g : Mrshounka_ducati_p_yel{};
@@ -1647,35 +1644,31 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_ducati_p_o : Mrshounka_ducati_p_yel{};
     class Mrshounka_ducati_p_lp : Mrshounka_ducati_p_yel{};
     class Mrshounka_ducati_p_gold : Mrshounka_ducati_p_yel{};
-
 	
 	class Mrshounka_pagani_c_bleufonce {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 16000000
+        price = 16000000;
         textures[] = {};
     };
     class Mrshounka_pagani_c_violet : Mrshounka_pagani_c_bleufonce{};
     class Mrshounka_pagani_c_orange : Mrshounka_pagani_c_bleufonce{};
-
 	
 	class cl3_carrera_gt_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15800000
+        price = 15800000;
         textures[] = {};
     };
     class cl3_carrera_gt_white : cl3_carrera_gt_black{};
     class cl3_carrera_gt_violet : cl3_carrera_gt_black{};
 
-	
 	class cl3_458_yellow {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15800000
+        price = 15800000;
         textures[] = {};
     };
-    class cl3_458_yellow : cl3_458_yellow{};
     class cl3_458_black : cl3_458_yellow{};
     class cl3_458_blue : cl3_458_yellow{};
     class cl3_458_white : cl3_458_yellow{};
@@ -1685,12 +1678,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_458_2tone1 : cl3_458_yellow{};
     class cl3_458_2tone2 : cl3_458_yellow{};
     class cl3_458_2tone3 : cl3_458_yellow{};
-
 	
 	class cl3_murcielago_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15000000
+        price = 15000000;
         textures[] = {};
     };
     class cl3_murcielago_blue : cl3_murcielago_black{};
@@ -1703,11 +1695,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_murcielago_2tone2 : cl3_murcielago_black{};
     class cl3_murcielago_2tone3 : cl3_murcielago_black{};
 
-	
 	class cl3_r8_spyder_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15000000
+        price = 15000000;
         textures[] = {};
     };
     class cl3_r8_spyder_blue : cl3_r8_spyder_black{};
@@ -1716,7 +1707,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
 	class vip_r8_spyder_white {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15000000
+        price = 15000000;
         textures[] = {};
     };
     class vip_r8_spyder_violet : vip_r8_spyder_white{};
@@ -1727,11 +1718,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class vip_r8_spyder_2tone2 : vip_r8_spyder_white{};
     class vip_r8_spyder_2tone5 : vip_r8_spyder_white{};
 
-	
 	class cl3_reventon_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 13400000
+        price = 13400000;
         textures[] = {};
     };
     class cl3_reventon_blue : cl3_reventon_black{};
@@ -1743,12 +1733,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_reventon_2tone1 : cl3_reventon_black{};
     class cl3_reventon_2tone2 : cl3_reventon_black{};
     class cl3_reventon_2tone3 : cl3_reventon_black{};
-
 	
 	class cl3_aventador_lp7004_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15600000
+        price = 15600000;
         textures[] = {};
     };
     class cl3_aventador_lp7004_blue : cl3_aventador_lp7004_black{};
@@ -1760,51 +1749,45 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_aventador_lp7004_2tone2 : cl3_aventador_lp7004_black{};
     class cl3_aventador_lp7004_2tone3 : cl3_aventador_lp7004_black{};
 
-	
 	class ivory_f1 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 14400000
+        price = 14400000;
         textures[] = {};
     };
-
 	
 	class ivory_mp4 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 15000000
+        price = 15000000;
         textures[] = {};
     };
-
 	
 	class ivory_lfa {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 13400000
+        price = 13400000;
         textures[] = {};
     };
-
 	
 	class Mrshounka_agera_p {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 13000000
+        price = 13000000;
         textures[] = {};
     };
 
-	
 	class ivory_veyron {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 11000000
+        price = 11000000;
         textures[] = {};
     };
-
 	
 	class Mrshounka_lykan_c {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 14000000
+        price = 14000000;
         textures[] = {};
     };
     class Mrshounka_lykan_c_yel : Mrshounka_lykan_c{};
@@ -1813,53 +1796,48 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_lykan_c_violet : Mrshounka_lykan_c{};
     class Mrshounka_lykan_c_orange : Mrshounka_lykan_c{};
 
-	
 	class Mrshounka_veneno_c {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 14000000
+        price = 14000000;
         textures[] = {};
     };
     class Mrshounka_veneno_c_noir : Mrshounka_veneno_c{};
     class Mrshounka_veneno_c_bleu : Mrshounka_veneno_c{};
     class Mrshounka_veneno_c_jaune : Mrshounka_veneno_c{};
 
-	
 	class mrshounka_huracan_c_bleufonce {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 10000000
+        price = 10000000;
         textures[] = {};
     };
     class mrshounka_huracan_c_violet : mrshounka_huracan_c_bleufonce{};
     class mrshounka_huracan_c_orange : mrshounka_huracan_c_bleufonce{};
-
 	
 	class shounka_mp4_bleufonce {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 10000000
+        price = 10000000;
         textures[] = {};
     };
     class shounka_mp4_violet : shounka_mp4_bleufonce{};
     class shounka_mp4_orange : shounka_mp4_bleufonce{};
-
 	
 	class shounka_limo_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 10000000
+        price = 10000000;
         textures[] = {};
     };
     class shounka_limo_civ_bleufonce : shounka_limo_civ{};
     class shounka_limo_civ_violet : shounka_limo_civ{};
     class shounka_limo_civ_orange : shounka_limo_civ{};
 
-
 	class cl3_dbs_volante_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 8400000
+        price = 8400000;
         textures[] = {};
     };
     class cl3_dbs_volante_blue : cl3_dbs_volante_black{};
@@ -1868,59 +1846,53 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_dbs_volante_flame1 : cl3_dbs_volante_black{};
     class cl3_dbs_volante_flame2 : cl3_dbs_volante_black{};
 
-
 	class shounka_clk_bleufonce {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 7600000
+        price = 7600000;
         textures[] = {};
     };
     class shounka_clk_violet : shounka_clk_bleufonce{};
     class shounka_clk_orange : shounka_clk_bleufonce{};
 
-
 	class cl3_veyron_F {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 9000000
+        price = 9000000;
         textures[] = {};
     };
     class cl3_veyron_lblue_dblue : cl3_veyron_F{};
     class cl3_veyron_black : cl3_veyron_F{};
     class cl3_veyron_red_red : cl3_veyron_F{};
 
-
 	class ivory_c {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 4400000
+        price = 4400000;
         textures[] = {};
     };
-
 
 	class ivory_elise {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 8000000
+        price = 8000000;
         textures[] = {};
     };
-
 
 	class Mrshounka_bmwm6_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 7000000
+        price = 7000000;
         textures[] = {};
     };
     class Mrshounka_bmwm6_bleufonce : Mrshounka_bmwm6_civ{};
     class Mrshounka_bmwm6_violet : Mrshounka_bmwm6_civ{};
     class Mrshounka_bmwm6_orange : Mrshounka_bmwm6_civ{};
 
-
 	class Mrshounka_jeep_blinde_bleu {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 5200000
+        price = 5200000;
         textures[] = {};
     };
     class Mrshounka_jeep_blinde_bleu_mat : Mrshounka_jeep_blinde_bleu{};
@@ -1929,33 +1901,30 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_jeep_blinde_rouge : Mrshounka_jeep_blinde_bleu{};
     class Mrshounka_jeep_blinde_rouge_mat : Mrshounka_jeep_blinde_bleu{};
 
-
 	class shounka_h2 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 7600000
+        price = 7600000;
         textures[] = {};
     };
     class shounka_h2_bleufonce : shounka_h2{};
     class shounka_h2_violet : shounka_h2{};
     class shounka_h2_orange : shounka_h2{};
 
-
 	class Mrshounka_hummer_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 6000000
+        price = 6000000;
         textures[] = {};
     };
     class Mrshounka_hummer_civ_bleufonce : Mrshounka_hummer_civ{};
     class Mrshounka_hummer_civ_violet : Mrshounka_hummer_civ{};
     class Mrshounka_hummer_civ_orange : Mrshounka_hummer_civ{};
 
-
 	class cl3_z4_2008_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 9000000
+        price = 9000000;
         textures[] = {};
     };
     class cl3_z4_2008_blue : cl3_z4_2008_black{};
@@ -1963,11 +1932,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class cl3_z4_2008_purple : cl3_z4_2008_black{};
     class cl3_z4_2008_white : cl3_z4_2008_black{};
 
-
 	class shounka_f430_spider {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 8000000
+        price = 8000000;
         textures[] = {};
     };
     class shounka_f430_spider_bleufonce : shounka_f430_spider{};
@@ -1975,49 +1943,44 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class shounka_f430_spider_violet : shounka_f430_spider{};
     class shounka_f430_spider_orange : shounka_f430_spider{};
 
-
 	class Jonzie_Viper {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 7000000
+        price = 7000000;
         textures[] = {};
     };
-
 
 	class shounka_porsche911 {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 5800000
+        price = 5800000;
         textures[] = {};
     };
     class shounka_porsche911_bleufonce : shounka_porsche911{};
     class shounka_porsche911_violet : shounka_porsche911{};
     class shounka_porsche911_orange : shounka_porsche911{};
 
-
 	class mrshounka_92_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 5800000
+        price = 5800000;
         textures[] = {};
     };
     class mrshounka_92_civ_bleufonce : mrshounka_92_civ{};
     class mrshounka_92_civ_violet : mrshounka_92_civ{};
     class mrshounka_92_civ_orange : mrshounka_92_civ{};
 
-
 	class ivory_isf {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 5000000
+        price = 5000000;
         textures[] = {};
     };
-
 
 	class Mrshounka_a3_gtr_civ {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 3800000
+        price = 3800000;
         textures[] = {};
     };
     class Mrshounka_a3_gtr_civ_bleu : Mrshounka_a3_gtr_civ{};
@@ -2026,26 +1989,23 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class Mrshounka_c63_2015_violet : Mrshounka_a3_gtr_civ{};
     class Mrshounka_c63_2015_orange : Mrshounka_a3_gtr_civ{};
 
-
 	class cl3_arielatom_race_black {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 2400000
+        price = 2400000;
         textures[] = {};
     };
     class cl3_arielatom_race_blue : cl3_arielatom_race_black{};
     class cl3_arielatom_race_red : cl3_arielatom_race_black{};
     class cl3_arielatom_race_green : cl3_arielatom_race_black{};
 
-
 	class Mrshounka_a3_308_rcz {
         vItemSpace = 75;
         licenses[] = { {"driver"}, {""}, {""}, {""} };
-        price = 2000000
+        price = 2000000;
         textures[] = {};
     };
     class Mrshounka_a3_308_rcz_bleufonce : Mrshounka_a3_308_rcz{};
     class Mrshounka_a3_308_rcz_violet : Mrshounka_a3_308_rcz{};
     class Mrshounka_a3_308_rcz_orange : Mrshounka_a3_308_rcz{};
-
 };

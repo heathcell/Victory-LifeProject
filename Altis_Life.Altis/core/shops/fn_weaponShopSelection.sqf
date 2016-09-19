@@ -51,38 +51,12 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
                 };
 
                 //Accessories Menu
-                if (isClass (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo")) then {
-                    private ["_slotArray"];
-                    _itemArray = [];
-                    if (isArray (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems")) then {
-                        _slotArray = FETCH_CONFIG3(getArray,"CfgWeapons",_item,"WeaponSlotsInfo","CowsSlot","compatibleItems");
-                        {
-                            _itemArray pushBack _x;
-                        } forEach _slotArray;
-                    };
-                    if (isArray (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleItems")) then {
-                        _slotArray = FETCH_CONFIG3(getArray,"CfgWeapons",_item,"WeaponSlotsInfo","MuzzleSlot","compatibleItems");
-                        {
-                            _itemArray pushBack _x;
-                        } forEach _slotArray;
-                    };
-                    if (isArray (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems")) then {
-                        _slotArray = FETCH_CONFIG3(getArray,"CfgWeapons",_item,"WeaponSlotsInfo","PointerSlot","compatibleItems");
-                        {
-                            _itemArray pushBack _x;
-                        } forEach _slotArray;
-                    };
-                    if (isArray (configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo" >> "UnderBarrelSlot" >> "compatibleItems")) then {
-                        _slotArray = FETCH_CONFIG3(getArray,"CfgWeapons",_item,"WeaponSlotsInfo","UnderBarrelSlot","compatibleItems");
-                        {
-                            _itemArray pushBack _x;
-                        } forEach _slotArray;
-                    };
-
+				_acclist = [_item] call CBA_fnc_compatibleItems;
+                if (count _acclist > 0) then {
                     _bool = false;
                     {
                         _var = _x select 0;
-                        _count = {_x == _var} count _itemArray;
+                        _count = {_x == _var} count _acclist;
                         if (_count > 0) exitWith {_bool = true};
                     } forEach M_CONFIG(getArray,"WeaponShops",_shop,"accs");
                     if (_bool) then {

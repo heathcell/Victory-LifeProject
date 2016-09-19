@@ -69,22 +69,6 @@ class Clothing {
             { "SFG", "", 7000, { "", "", -1 } },
             { "A3L_SkidRow", "", 3000, { "", "", -1 } },
             { "A3L_SkullBlack", "", 3000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_BK", "", 4000, { "", "", -1 } },
-            { "TRYK_U_B_PCUGs_OD_R", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_BWH", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_od", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_R", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_RED2", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_WH", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_WHB", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_DENIM_ylb", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_PAD_BK", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_BLK_PAD_BK", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_OD_PAD_BK", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_TAN_PAD_BK", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_PAD_BL", "", 5000, { "", "", -1 } },
-            { "TRYK_shirts_BLK_PAD_BL", "", 5000, { "", "", -1 } },
-            { "TRYK_U_pad_hood_CSATBlk", "", 5000, { "", "", -1 } },
             { "U_C_WorkerCoveralls", "", 8000, { "", "", -1 } },
             { "U_C_WorkerCoveralls", "", 8000, { "", "", -1 } },
             { "cg_chelsea1", "", 6000, { "", "", -1 } },
@@ -390,22 +374,44 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, { "", "", -1 } },
-            { "U_Rangemaster", "EMS Uniform", 50, { "", "", -1 } }
+            { "U_Rangemaster", "", 1000, { "", "", -1 } },
+            { "GNS_paramedic", "", 5000, { "", "", -1 } },
+            { "jamie_paramedic", "", 5000, { "", "", -1 } },
+            { "GNS_Rescue_Uniform", "", 5000, { "", "", -1 } },
+            { "jamie_airambulance", "", 5000, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
-            { "H_Cap_blu", "", 10, { "", "", -1 } }
+            { "H_Cap_blu", "", 100, { "", "", -1 } },
+            { "H_Cap_marshal", "", 100, { "", "", -1 } },
+            { "A3L_medic_helmet", "", 1000, { "", "", -1 } },
+            { "TRYK_H_headsetcap_blk_Glasses", "", 1000, { "", "", -1 } },
+            { "H_HelmetB_TI_tna_F", "", 1000, { "", "", -1 } }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, { "", "", -1 } },
-            { "G_Shades_Blue", "", 10, { "", "", -1 } }
+            { "G_Shades_Blue", "", 100, { "", "", -1 } },
+            { "G_Bandanna_sport", "", 1000, { "", "", -1 } },
+            { "TRYK_TAC_SET_OD_2", "", 1000, { "", "", -1 } },
+            { "G_Goggles_VR", "", 1000, { "", "", -1 } }
         };
         vests[] = {
-            { "NONE", "Remove Vest", 0, { "", "", -1 } }
+            { "NONE", "Remove Vest", 0, { "", "", -1 } },
+            { "jamie_medic_b", "", 100000, { "", "", -1 } },
+            { "jamie_medic", "", 100000, { "", "", -1 } }
         };
         backpacks[] = {
             { "NONE", "Remove Backpack", 0, { "", "", -1 } },
-            { "B_FieldPack_oli", "EMS Backpack", 3000, { "", "", -1 } }
+            { "B_FieldPack_oli", "EMS Backpack", 3000, { "", "", -1 } },
+            { "koilmedicdarkred", "", 5000, { "", "", -1 } },
+            { "koilmedicblue", "", 5000, { "", "", -1 } },
+            { "koilmedicwhite", "", 5000, { "", "", -1 } },
+            { "koilmedicyellow2", "", 5000, { "", "", -1 } },
+            { "koilmedicyellow", "", 5000, { "", "", -1 } },
+            { "medicz", "", 5000, { "", "", -1 } },
+            { "TAC_BP_KAR_B", "", 5000, { "", "", -1 } },
+            { "TAC_BP_LBT_HB_B", "", 5000, { "", "", -1 } },
+            { "B_Parachute", "", 5000, { "", "", -1 } }
         };
     };
 

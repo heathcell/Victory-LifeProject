@@ -92,7 +92,7 @@ class Licenses {
     class home {
         variable = "home";
         displayName = "STR_License_Home";
-        price = 75000;
+        price = 1000000;
         illegal = false;
         side = "civ";
     };
@@ -190,7 +190,7 @@ class Licenses {
     class rebel {
         variable = "rebel";
         displayName = "STR_License_Rebel";
-        price = 75000;
+        price = 500000;
         illegal = true;
         side = "civ";
     };

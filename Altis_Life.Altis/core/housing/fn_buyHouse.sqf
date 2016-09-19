@@ -6,7 +6,7 @@
     Description:
     Buys the house?
 */
-private ["_house","_uid","_action","_houseCfg"];
+private ["_house","_uid","_action","_houseCfg","_price"];
 _house = param [0,objNull,[objNull]];
 _uid = USERID;
 
@@ -21,15 +21,21 @@ closeDialog 0;
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if (count _houseCfg isEqualTo 0) exitWith {};
 
+if ({player distance getMarkerPos (_x select 0) < _x select 1 } count SAFETY_ZONES > 0) then {
+	_price = (_houseCfg select 0) * 2;
+} else {
+	_price = (_houseCfg select 0);
+};
+
 _action = [
     format [localize "STR_House_BuyMSG",
-    [(_houseCfg select 0)] call life_fnc_numberText,
+    [_price] call life_fnc_numberText,
     (_houseCfg select 1)],localize "STR_House_Purchase",localize "STR_Global_Buy",localize "STR_Global_Cancel"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
-    BANK = BANK - (_houseCfg select 0);
+    if (BANK < _price) exitWith {hint format [localize "STR_House_NotEnough"]};
+    BANK = BANK - _price;
     [1] call SOCK_fnc_updatePartial;
 
     if (life_HC_isActive) then {
@@ -40,9 +46,9 @@ if (_action) then {
 
     if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
         if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-            advanced_log = format [localize "STR_DL_AL_boughtHouse_BEF",[(_houseCfg select 0)] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_boughtHouse_BEF",[_price] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
         } else {
-            advanced_log = format [localize "STR_DL_AL_boughtHouse",profileName,(getPlayerUID player),[(_houseCfg select 0)] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+            advanced_log = format [localize "STR_DL_AL_boughtHouse",profileName,(getPlayerUID player),[_price] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
         };
         publicVariableServer "advanced_log";
     };

@@ -13,7 +13,7 @@ class Garages {
     class Altis {
 
         class Land_i_Garage_V1_F {
-            price = 500000;
+            price = 5000000;
             garageSpawnPos[] = {-11.5,0,0};
             garageSpawnDir = -90;
             garageBlacklists[] = {};

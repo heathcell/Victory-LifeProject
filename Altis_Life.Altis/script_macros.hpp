@@ -56,5 +56,5 @@
 #define ALTIS_TANOA(var1,var2) if (worldName == "Altis") then {var1} else {var2}
 
 //Safe Zone
-#define SAFETY_ZONES [["safezone", 600], ["safezone_2", 75]]
+#define SAFETY_ZONES [["safe_kav", 1000], ["safe_ath", 500], ["safe_pyr", 150], ["safe_reb_1", 150], ["safe_reb_2", 150], ["safe_reb_3", 100]]
 #define SZ_MESSAGE "You Are In A Safe Zone! Live rounds disabled"
